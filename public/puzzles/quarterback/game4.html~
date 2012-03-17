@@ -1,0 +1,76 @@
+<script>
+$(function() {
+		$( ".draggable" ).draggable({
+
+		  start: function( event, ui ) {
+		    $( this )
+		       littlebox = $( this ).attr('id');
+		       }
+		        });
+		$( ".droppable4b" ).droppable({
+			drop: function( event, ui ) {
+				$( this )
+				  .addClass( "ui-state-highlight" )
+				  bigbox = $( this ).attr('id')
+				  game4(bigbox)
+				  if (arrayLength(boxes) == true){
+				    $('#score_right').append("<p>" + (littlebox) + "-" + (bigbox) + "</p>");
+			      boxes.push((littlebox) + (bigbox));
+			      }
+			    boxColors2(littlebox)
+				  }
+		});
+	});
+</script>
+<h1>put the racing blocks in their correct meet and their correct place:</h1>
+
+<div class = "demo_frame_top">
+<p>1) M and N finished last in their meets<br />
+
+2) K finished first in its meet<br />
+
+3) L's meet was later than J's<br />
+
+4) L did not race with M or K<br />
+
+5) K and J cannot be together<br />
+
+6) The morning meet was full<br /></p>
+<div class="draggable" id = "J">
+	<p>J</p>
+</div>
+<div class="draggable" id = "K">
+	<p>K</p>
+</div>
+<div class="draggable" id = "L">
+	<p>L</p>
+</div>
+<div class="draggable" id = "M">
+	<p>M</p>
+</div>
+<div class="draggable" id = "N">
+	<p>N</p>
+</div><br />
+</div>
+
+<div class = "demo_frame_bottom">
+<div class="droppable4" class="ui-widget-header" id = "1">
+	<p>Morning</p>
+	<div class="droppable4b" id = "1"><p>first</p></div>
+	<div class="droppable4b" id = "2"><p>last</p></div>
+</div>
+<div class="droppable4" class="ui-widget-header" id = "2">
+	<p>Afternoon</p>
+	<div class="droppable4b" id = "3"><p>first</p></div>
+	<div class="droppable4b" id = "4"><p>last</p></div>
+</div>
+<div class="droppable4" class="ui-widget-header" id = "3">
+	<p>Night</p>
+	<div class="droppable4b" id = "5"><p>first</p></div>
+	<div class="droppable4b" id = "6"><p>last</p></div>
+</div>
+
+</div>
+<button class = "btn" style = "float:left;margin:10px;" onclick="compareAnswers(boxes, allboxes3, '#demo_frame', 'puzzles/quarterback/game3', '#score_right p');">check</button>
+<button class = "btn" style = "float:left;margin:10px;" onclick = "resetGame('#demo_frame', 'puzzles/quarterback/game4', '#score_right p', boxes);" >reset</button>
+</div>

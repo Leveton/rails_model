@@ -1,0 +1,30 @@
+
+<div id = "demo_score1"><%= current_user.get_puzzle_times(0, 0) %></div>
+<div id = "demo_score2"><%= current_user.get_puzzle_times(0, 2) %></div>
+<div id = "demo_score3"><%= current_user.get_puzzle_times(0, 4) %></div>
+
+
+<div style = 'display:table;'>
+<h1>Your graphs and stats</h1>
+<h2>Demo Puzzle</h2>
+<div class = "puzzle_show_left"><div class = 'user_y_axis'></div></div>
+<div class = "puzzle_show_right"><div class = 'prepcloud_y_axis'></div></div>
+
+</div>
+
+<script type="text/javascript" src="/javascripts/d3/d3.min.js"></script>
+<script type="text/javascript" src="/javascripts/controllers/puzzles_show.js"></script>
+<script>
+//demo puzzle
+$(function() {
+  user_data.length = 0;
+  var punta = $('#demo_score1').html();
+  var punta2 = $('#demo_score2').html();
+  var punta3 = $('#demo_score3').html();
+  user_data.push(punta);
+  user_data.push(punta2);
+  user_data.push(punta3);
+  d3_charts('.puzzle_show_left','.user_y_axis', '.puzzle_show_right', '.prepcloud_y_axis', demo_puzzle_data, demo_puzzle_y_data);
+});
+
+</script>

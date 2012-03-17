@@ -1,0 +1,140 @@
+<div class = 'row'>
+<div class = 'span10'>
+
+<div id = "demo_frame">
+<h1>Russian Dolls</h1>
+
+<div class = "demo_frame_top">
+
+<p>Put the blocks in their correct doll<br />
+
+1) No doll can have more than two blocks<br />
+
+2) J is not alone in a doll<br />
+
+3) The little doll has fewer blocks than the other dolls<br />
+
+4) N is in a doll with K<br />
+
+5) M is in the middle doll<br /></p>
+<div class="draggable" id = "J">
+	<p>J</p>
+</div>
+<div class="draggable" id = "K">
+	<p>K</p>
+</div>
+<div class="draggable" id = "L">
+	<p>L</p>
+</div>
+<div class="draggable" id = "M">
+	<p>M</p>
+</div>
+<div class="draggable" id = "N">
+	<p>N</p>
+</div>
+</div>
+
+<div class = demo_frame_bottom style = "height:370px;background:transparent;">
+<div class="droppable0" style="background:red;" id = "1">
+	<p>big doll</p>
+	<div class="droppable0b" id = "2" ><p>middle doll</p>
+	  <div class="droppable0b0" id = "3"><p>little doll</p></div>
+	</div>
+</div>
+</div>
+
+<button class = "btn" style = "float:left;margin:10px;" onclick="compareAnswers(boxes, allboxes1, '#demo_frame', 'puzzles/quarterback/game2', '#score_right p');">check</button>
+<button class = "btn" style = "float:left;margin:10px;" onclick = "resetGame('#demo_frame', 'puzzles/quarterback/game2', '#score_right p', boxes);" >reset</button>
+</div>
+<div id = "exercise_form" class = "hidden" >
+
+<div class = "exercise_form_title1">That's correct!</div>
+<div class = "exercise_form_title2" style="background:#88ff77;">Below is your time per puzzle</div>
+<div class = "exercise_form_title3" style="background:#66ff88;">Remember, it's all about the speed..*</div>
+
+<div class = 'user_chart' style="margin-top:15px;">
+<h3>average user's time per puzzle (in seconds)</h3>
+<div class = 'user_barchart'><div class = 'user_y_axis'></div></div>
+</div><br />
+
+<div class = 'user_chart'>
+<h3>Your average time per puzzle (in seconds)</h3>
+<div class = 'prepcloud_barchart'><div class = 'prepcloud_y_axis'></div></div>
+</div>
+
+<div class = 'user_chart' style="margin-top:15px;">
+<h3>average number of guesses per user</h3>
+<div class = 'user_barchart2'><div class = 'user_y_axis2'></div></div>
+</div><br />
+
+<div class = 'user_chart'>
+<h3>Your number of guesses</h3>
+<div class = 'prepcloud_barchart2'><div class = 'prepcloud_y_axis2'></div></div>
+</div>
+
+<div class = 'user_chart' style="margin-top:15px;">
+<h3>average number of resets per user</h3>
+<div class = 'user_barchart3'><div class = 'user_y_axis3'></div></div>
+</div><br />
+
+<div class = 'user_chart'>
+<h3>Your number of resets</h3>
+<div class = 'prepcloud_barchart3'><div class = 'prepcloud_y_axis3'></div></div>
+</div>
+
+<% if current_user.saved_check('Quarterback2').empty? %>
+<div id = "puzzle_save_option">
+<h2>Save your results?</h2><br />
+<button class = "btn" onclick="makePuzzle();">yes</button>
+<form class ="pull-right"method='link' action='/'><button class="btn">no</button></form>
+</div><br />
+
+<div id = "puzzle_saved" style="margin-top:10px;" class="hidden"><p>Your results have been saved, <a href='<%= quarterback_show_path %>'>click here</a> to see all of your results.</p></div>
+
+<% else %>
+<div id = "puzzle_save_option">
+<h2>You have already saved your results for this puzzle</h2>
+</div>
+<% end %>
+
+<p>*and understanding contrapositives</p>
+<p>**You will then be sent to a new puzzle, you cannot repeat this puzzle after that.</p><br />
+
+</div>
+
+<div id = "timesUp_form" class = "hidden" >
+<h1>Time's Up!</h1>
+<h2>Would you like to repeat the puzzle or exit?</h2><br /><br />
+<p>Try as many times as it takes you to get it right</p><br />
+<div class = "btn"><a><%= link_to "repeat", game2_path %></a></div>
+<div class = "btn" style="float:right;"><a><%= link_to "exit", root_path %></a></div>
+</div>
+</div>
+
+  <div class="span4">
+    <div class="puzzle_panel">
+    <div id ="score_right_timer"><strong></strong><p></p></div>
+    <div id ="score_right"><strong>Your Answer:  </strong></div>
+    <div class="fuckyou"><div class="boxgrid slideright"><div class="cover boxcaption"style="background:#2F2F2F;">hint</div><p></p></div></div>
+ </div>
+  </div>
+
+</div>
+
+<script src="https://www.google.com/jsapi?key=ABQIAAAA5TxFSmgopWCajQNyTIoT8hStcRCLXCr0vyCftWOM2tQQST_-5hSVq0YI4pspGoXIGxDHdbH4onBpWw" type="text/javascript"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script language="Javascript" type="text/javascript">google.load("jqueryui", "1.8.16");</script>
+<script type="text/javascript" src="/javascripts/jquery/widgetDialogPositionProgressbar.min.js"></script>
+<script type="text/javascript" src="/javascripts/jquery/draggableDroppable.min.js"></script>
+<script type="text/javascript" src="/javascripts/jquery/jquery.ui.mouse.min.js"></script>
+<script type="text/javascript" src="/javascripts/d3/d3.min.js"></script>
+<script type="text/javascript" src="/javascripts/controllers/quarterback/game2/game2.js"></script>
+<script type="text/javascript" src="/javascripts/controllers/quarterback/game2/d3.js"></script>
+<script src="/javascripts/controllers/backbonePuzzles.js"></script>
+<script>
+function makePuzzle(){
+        Puzzles.create({title:'Quarterback2', latency:user_data, attempts:attempts, resets:resets, done:true, user_id:'<%= current_user.id %>'});
+        $('#puzzle_saved').removeClass("hidden");
+        $('#puzzle_save_option').addClass("hidden");
+}
+</script>

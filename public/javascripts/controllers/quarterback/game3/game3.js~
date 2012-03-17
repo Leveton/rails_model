@@ -1,0 +1,74 @@
+jQuery.fn.compare = function (i) {
+    if (this.length != i.length) {
+        return false;
+    }
+    var m = this.sort(),
+        n = i.sort();
+    for (var l = 0; i[l]; l++) {
+        if (m[l] !== n[l]) {
+            return false;
+        }
+    }
+    return true;
+};
+$(function () {
+    count = 150;
+    countdown = setInterval(function () {
+        $("#score_right_timer p").html(count + "  seconds remaining");
+        if (count == 0) {
+            showForm("#demo_frame", "#timesUp_form");
+            return false;
+        }
+        count--;
+    }, 1000);
+});
+$(function () {
+    $("#score_right").hide();
+});
+
+function showForm(i, j) {
+    $(i).replaceWith($(j));
+    $(j).removeClass("hidden");
+}
+function sudotiku() {
+    a = $(".c2 input").attr("value");
+    b = $(".c3 input").attr("value");
+    c = $(".c4 input").attr("value");
+    d = $(".c5 input").attr("value");
+    e = $(".c7 input").attr("value");
+    f = $(".c8 input").attr("value");
+    if (a == "1" && b == "6" && c == "3" && d == "5" && e == "4" && f == "9") {
+        clearInterval(countdown);
+        timeTaken = (150 - count);
+        user_data.push(timeTaken);
+        attempts.push(attempt);
+        resets.push(reset);
+        showForm("#demo_frame", "#exercise_form");
+        d3_charts(".user_barchart", ".user_y_axis", ".prepcloud_barchart", ".prepcloud_y_axis", data, y_data, user_data);
+        d3_charts(".user_barchart2", ".user_y_axis2", ".prepcloud_barchart2", ".prepcloud_y_axis2", ave_attempts, y_data, attempts);
+        d3_charts(".user_barchart3", ".user_y_axis3", ".prepcloud_barchart3", ".prepcloud_y_axis3", ave_resets, y_data, resets);
+    } else {
+        alert("Incorrect, Please try again");
+        resetGame(a, b);
+        ++attempt;
+    }
+}
+$(document).ready(function () {
+    $(".boxgrid.slideright").hover(function () {
+        $(".cover", this).stop().animate({
+            left: "325px"
+        }, {
+            queue: false,
+            duration: 700
+        });
+    }, function () {
+        $(".cover", this).stop().animate({
+            left: "0px"
+        }, {
+            queue: false,
+            duration: 700
+        });
+    });
+    $(".boxgrid.slideright p").empty();
+    $(".boxgrid.slideright p").html("The center space contains 5");
+});

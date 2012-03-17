@@ -1,0 +1,31 @@
+<table>
+<tr>
+<td id = 'steps_table1'>Step 1<br /><br />Choose Date</td>
+<td id = 'steps_table2'>Step 2<br /><br />Choose Hour</td>
+<td id = 'steps_table3'>Step 3<br /><br />Confirm Time</td>
+<td id = 'steps_table4' style = 'background:#00FFCC;'>Step 4<br /><br />Pay with PayPal</td>
+<td id = 'steps_table5'>Step 5<br /><br />Confirmation</td>
+</tr>
+</table><br />
+
+
+<h4>Please Confirm Your Billing Details</h4>
+<h5>You will be redirected to a success page upon hitting confirm</h5>
+
+
+<table>
+  <tr><td>Name</td><td><%= @address['name'] %></td></tr>
+  <tr><td>Company</td><td><%= @address['company'] %></td></tr>
+  <tr><td>Address 1</td><td><%= @address['address1'] %></td></tr>
+  <tr><td>Address 2</td><td><%= @address['address2'] %></td></tr>
+  <tr><td>City</td><td><%= @address['city'] %></td></tr>
+  <tr><td>State</td><td><%= @address['state'] %></td></tr>
+  <tr><td>Country</td><td><%= @address['country'] %></td></tr>
+  <tr><td>Zip</td><td><%= @address['zip'] %></td></tr>
+  <tr><td>Total</td><td>$70.00</td></tr>
+</table>
+
+<%= form_tag :action => 'complete_tutoring', :token => params[:token], :payer_id => params[:PayerID] do %>
+  <%= submit_tag 'Confirm' %>
+<% end %>
+

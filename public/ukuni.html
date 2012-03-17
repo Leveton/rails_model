@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='utf-8'>
+<meta content='IE=edge,chrome=1' http-equiv='X-UA-Compatible'>
+<link href='http://fonts.googleapis.com/css?family=Arvo' rel='stylesheet' type='text/css'>
+<style>
+@font-face {
+  font-family: 'Arvo';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Arvo'), url('http://themes.googleusercontent.com/static/fonts/arvo/v4/WJ6D195CfbTRlIs49IbkFw.woff') format('woff');
+}
+</style>
+
+<title>UK University Statistics Visualization</title>
+<script src='//ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js'></script>
+<script>
+window.jQuery || document.write('<script src="/javascripts/vendor/jquery.js">\x3C/script>')
+</script>
+</head>
+<body class='vbox'>
+<div id='hidden'></div>
+<div id='details'>
+<h2>The Visualization</h2>
+
+<p>This visualization is a linked treemap (bottom) and line chart (top right).
+The treemap uses area to show the relative proportions of a whole, in this case all the students who applied or were accepted to a UK university in the given year.
+The line chart shows how much the currently selected group has grown, relative to the indicated year.
+(For instance, if 2003 is the reference year, mousing over the 25 to 39 year old female treemap cell will show that the group is twice the size (that is, a 100% gain) in 2010 as it was in 2003.)</p>
+
+<h2>Controls</h2>
+
+<ul>
+<li>Mouseover a treemap cell to select a group</li>
+<li>Click the line chart's axis labels to select a year</li>
+<li>Click on a cell in the treemap to show the relative proportions of other cells in the same group.</li>
+</ul>
+
+
+<h2>Data + Code</h2>
+
+<p>This visualization uses the 2003&ndash;2010 "Ethnicity / Social Class" data from <a href="http://www.ucas.com/about_us/stat_services/stats_online/annual_datasets_to_download/">UCAS</a>.
+They provide the data in executable self-unzipping Excel sheets, but we wrote and open-sourced <a href="https://gist.github.com/1031879">a script</a> to normalize and import into SQLite.</p>
+
+<h2>About</h2>
+
+<p>This visualization was made for Postgrad.com &amp; David McCandless's <a href="http://www.postgrad.com/editorial/data-visualisation-competition/">Data Visualization Competition</a> by Kevin Lynagh of <a href="http://keminglabs.com">Keming Labs</a> the weekend of 2011 June 10.
+Thanks to Mike Bostock for <a href="http://mbostock.github.com/d3/">d3.js</a> and Jeremy Ashkenas for <a href="http://jashkenas.github.com/coffee-script/">CoffeeScript</a>.
+Also thanks to the fine people at <a href="http://periscopic.com">Periscopic</a> for helpful UI advice.</p>
+</div>
+<div class='hbox' id='header'>
+<div id='left'>
+<h1>UK University Statistics</h1>
+
+<p>A visualization by <a href="http://keminglabs.com">Keming Labs</a>, data from <a href="http://www.ucas.com/about_us/stat_services/stats_online/annual_datasets_to_download/">UCAS</a>. <br/>
+<span id="details_link" style="float: right;"><a href="#">More details &rArr;</a></span></p>
+
+<div style="clear: both;"></div>
+<div id='controls'>
+<span>Divide treemap up by</span>
+<table>
+<tr class='hie' id='hie1'>
+<td>
+<a class='button selected'>Age</a>
+</td>
+<td>
+<a class='button'>Ethnicity</a>
+</td>
+<td>
+<a class='button'>Subject</a>
+</td>
+<td>
+<a class='button'>Gender</a>
+</td>
+</tr>
+</table>
+<span>and then divide that up by:</span>
+<table>
+<tr class='hie' id='hie2'>
+<td>
+<a class='button'>Age</a>
+</td>
+<td>
+<a class='button'>Ethnicity</a>
+</td>
+<td>
+<a class='button'>Subject</a>
+</td>
+<td>
+<a class='button'>Gender</a>
+</td>
+</tr>
+</table>
+<div id='sizing'>
+<span>
+Size by:
+<a class='button selected' href='#'>Applied</a>
+/
+<a class='button' href='#'>Accepted</a>
+</span>
+</div>
+<div id='coloring'>
+<span>
+Color by:
+<a class='button selected' href='#'>Category</a>
+/
+<a class='button' href='#'>Acceptance Rate</a>
+</span>
+<div id='color_scale'>
+<span style='color: white; float: left;'>lower</span>
+<span style='color: black; float: right;'>higher</span>
+<div style='clear:both;'></div>
+</div>
+</div>
+</div>
+</div>
+<div class='box_flex' id='linechart'></div>
+</div>
+<div class='box_flex' id='treemap'></div>
+<script src='ukuni.js'></script>
+<script>
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-23092253-1']);
+_gaq.push(['_trackPageview']);
+(function() {
+var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+</body>
+</html>
+

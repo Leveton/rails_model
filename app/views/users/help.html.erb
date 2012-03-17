@@ -1,0 +1,44 @@
+<div id="permanent_success">Here's a site layout of sorts</div><br />
+
+
+<table>
+
+
+	<tr>
+		<td>
+		<div class="date_taken">
+		<%= link_to 'your account details', user_path(current_user.id) %> 
+    
+		</td>
+		</div>
+
+		<td>
+		<div class="date_taken">
+	 <%= link_to 'contact us', contact_us_path %> 
+    </td>
+		</div>
+
+		<td>
+		<div class="difficulty_level">
+	 <%= link_to 'LSAT question practice', tutoring_path %> 
+		</td>
+		</div>
+
+		<td>
+		<div class="quiz_type">
+		<%= link_to 'Logic practice', puzzles_path %> 
+		</td>
+		</div>
+
+		<td>
+		<div class="correct">
+		<%= link_to 'your practice statistics', stats_path %> 
+		</td>
+		</div>
+
+		
+
+
+	</tr>
+
+</table>

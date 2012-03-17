@@ -1,0 +1,125 @@
+<div class = 'row'>
+<div class = 'span10'>
+<div id = "demo_frame">
+<h1>drag the blocks into the correct space based on these rules:</h1>
+
+
+<p>1) M is in the less crowded space<br />
+
+2) N and K must be in the same space<br />
+
+3) If a space does not contain L, then that space contains J<br />
+
+4) M is in Space 1<br />
+
+5) K and J cannot be together<br /></p>
+<div class="draggable" id = "J">
+	<p>J</p>
+</div>
+<div class="draggable" id = "K">
+	<p>K</p>
+</div>
+<div class="draggable" id = "L">
+	<p>L</p>
+</div>
+<div class="draggable" id = "M">
+	<p>M</p>
+</div>
+<div class="draggable" id = "N">
+	<p>N</p>
+</div><br />
+
+
+<div class = "demo_frame_bottom">
+<div class="droppable2" style = "background-color:#102C31" id = "1">
+	<p>Space 1</p>
+</div>
+<div class="droppable2" style = "background-color:#102C31" id = "2">
+	<p>Space 2</p>
+</div>
+</div>
+<div class="derecha_holder" style="width:200px;height:300px;background:transparent;"></div>
+<div style = 'clear:both;'>
+
+<button class = "btn" onclick="compareAnswers(boxes, allboxes2, '#demo_frame', 'puzzles/demo/game1', 'puzzles/demo/game0', '#score_right p');">check</button>
+<button class = "btn" style = "float:right;" onclick = "resetGame('#demo_frame', 'puzzles/demo/game0', '#score_right p', boxes);" >reset</button>
+</div>
+</div>
+<div id = "exercise_form" class = "hidden" >
+<div class = "exercise_form_title1">That's correct!</div>
+<div class = "exercise_form_title2" style="background:#88ff77;">Below is your time per puzzle</div>
+<div class = "exercise_form_title3" style="background:#66ff88;">Remember, it's all about speed..*</div>
+
+<div class = 'user_chart' style="margin-top:15px;">
+<h3>average user's time per puzzle (in seconds)</h3>
+<div class = 'user_barchart'><div class = 'user_y_axis'></div></div>
+</div><br />
+
+<div class = 'user_chart'>
+<h3>Your average time per puzzle (in seconds)</h3>
+<div class = 'prepcloud_barchart'><div class = 'prepcloud_y_axis'></div></div>
+</div>
+
+<div class = 'user_chart' style="margin-top:15px;">
+<h3>average number of guesses per user</h3>
+<div class = 'user_barchart2'><div class = 'user_y_axis2'></div></div>
+</div><br />
+
+<div class = 'user_chart'>
+<h3>Your number of guesses</h3>
+<div class = 'prepcloud_barchart2'><div class = 'prepcloud_y_axis2'></div></div>
+</div>
+
+<div class = 'user_chart' style="margin-top:15px;">
+<h3>average number of resets per user</h3>
+<div class = 'user_barchart3'><div class = 'user_y_axis3'></div></div>
+</div><br />
+
+<div class = 'user_chart'>
+<h3>Your number of resets</h3>
+<div class = 'prepcloud_barchart3'><div class = 'prepcloud_y_axis3'></div></div>
+</div>
+
+<h2><%= link_to "Sign up", new_user_registration_path %> for free to play the other puzzles</h2><br /><br />
+
+<p>*and understanding contrapositives</p>
+<p>**You will then be sent to a new puzzle, you cannot repeat this puzzle after that.</p><br />
+
+</div>
+
+<div id = "timesUp_form" class = "hidden" >
+<h1>Time's Up!</h1>
+<h2>Would you like to repeat the puzzle or exit?</h2><br /><br />
+<p>Try as many times as it takes you to get it right</p><br />
+
+<div class = "btn"><a><%= link_to "repeat", demo_path %></a></div>
+<div class = "btn" style="float:right;"><a><%= link_to "exit", root_path %></a></div>
+</div>
+</div>
+   <div class="span4">
+    <%= render 'shared/puzzle_panel' %>
+   </div>
+
+</div>
+
+
+ <div id="dialog-message">
+            <div class="modal-header">
+              <h3>Puzzle Demo</h3>
+            </div>
+            <div class="modal-body">
+<p>This three-game puzzle demonstrates our logic games.  If you feel they are helpful, or just enjoy them, then sign up to play the rest.<br /><br />  Refer to your right-hand game panel for your puzzle progress, your time limit, and the answers you've chosen.</p>
+            </div>
+            <div class="modal-footer">
+              <button onclick="cierra_dialog('#dialog-message');" class="btn danger">Begin Quiz!</button>
+            </div>
+          </div>
+
+<script src="https://www.google.com/jsapi?key=ABQIAAAA5TxFSmgopWCajQNyTIoT8hStcRCLXCr0vyCftWOM2tQQST_-5hSVq0YI4pspGoXIGxDHdbH4onBpWw" type="text/javascript"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script language="Javascript" type="text/javascript">google.load("jqueryui", "1.8.16");</script>
+<script type="text/javascript" src="/javascripts/jquery/widgetDialogPositionProgressbar.min.js"></script>
+<script type="text/javascript" src="/javascripts/jquery/draggableDroppable.min.js"></script>
+<script type="text/javascript" src="/javascripts/jquery/jquery.ui.mouse.min.js"></script>
+<script type="text/javascript" src="/javascripts/controllers/demo/game0.min.js"></script>
+<script type="text/javascript" src="/javascripts/d3/d3.min.js"></script>

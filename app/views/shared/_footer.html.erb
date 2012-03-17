@@ -1,0 +1,59 @@
+<footer>
+    <!--p style="color:#fff;">&copy; Derecha 2011</p-->
+    <div class="wrapper footer">
+        <div id="footer">
+            <div class="leftCol"></div>
+            <!-- /leftCol -->
+            <div class="rightCol">
+        <%= form_for(:pages, :url => pages_path, :html => {:class => "newsletter"}) do |f| %>
+          <p><img src="/images/prepcloud_footer4.png" class="" alt="Sample App"></p>
+                    <input type="text" onfocus="this.value = (this.value=='get email updates')? '' : this.value;"
+                    value="get email updates" name="email" id="email">
+                    <input type="submit" value="submit" class="btn">
+                <% end %>
+                <br class="clearfloat">
+                <p class="footerPrivacy">
+                    <a rel="facebox[.facebig]" href="/privacy" <a="" class="legalPrivacy">You will receive monthly updates only</a>
+                </p>
+                <br class="clearfloat">
+            </div>
+            <!-- /rightCol -->
+            <br class="clearfloat">
+            <nav class="footerLinks">
+                <ul>
+                    <li class="footerNow">
+                        <img src="/images/PayPal_logo2.png" class="" alt="Sample App">
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <a href="/help">Help</a>
+                    </li>
+                    <li>
+                        <a href="/contact_us">Contact</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <%= link_to('Terms', legal_path, :rel => "facebox[.facebig]")  %>
+                    </li>
+                    <li>
+                        <%= link_to('Privacy', privacy_path, :rel => "facebox[.facebig]")  %>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="footerNot">
+                        <img src="/images/Google-Wallet-logo2.png" class="" alt="Sample App">
+                    </li>
+                </ul>
+                <br class="clearfloat">
+                <br>
+                <div class="copyright">
+                    <p>&copy; 2012 | PrepCloud</p>
+                </div>
+            </nav>
+            <!-- END: footerLInks -->
+        </div>
+        <!-- /#footer -->
+    </div>
+</footer>

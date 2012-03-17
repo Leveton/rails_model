@@ -1,0 +1,78 @@
+<div id = "terrible_score1"><%= current_user.get_puzzle_times('Quarterback1', 0) %></div>
+<div id = "terrible_score2"><%= current_user.get_puzzle_times('Quarterback2', 0) %></div>
+<div id = "terrible_score3"><%= current_user.get_puzzle_times('Quarterback3', 0) %></div>
+<div id = "terrible_score4"><%= current_user.get_puzzle_times('Quarterback4', 0) %></div>
+<div id = "terrible_score5"><%= current_user.get_puzzle_times('Quarterback5', 0) %></div>
+<div id = "noire_attempts"><%= current_user.get_puzzle_attempts('Quarterback1', 0) %></div>
+<div id = "noire_resets"><%= current_user.get_puzzle_resets('Quarterback1', 0) %></div>
+<div id = "noire_attempts2"><%= current_user.get_puzzle_attempts('Quarterback2', 0) %></div>
+<div id = "noire_resets2"><%= current_user.get_puzzle_resets('Quarterback2', 0) %></div>
+<div id = "noire_attempts3"><%= current_user.get_puzzle_attempts('Quarterback3', 0) %></div>
+<div id = "noire_resets3"><%= current_user.get_puzzle_resets('Quarterback3', 0) %></div>
+<div id = "noire_attempts4"><%= current_user.get_puzzle_attempts('Quarterback4', 0) %></div>
+<div id = "noire_resets4"><%= current_user.get_puzzle_resets('Quarterback4', 0) %></div>
+<div id = "noire_attempts5"><%= current_user.get_puzzle_attempts('Quarterback5', 0) %></div>
+<div id = "noire_resets5"><%= current_user.get_puzzle_resets('Quarterback5', 0) %></div>
+
+<div style = 'display:table;'>
+<h1>Graphs and stats for Enfant Terrible</h1>
+<h2>Time per puzzle in seconds</h2>
+<div class = "puzzle_show_left"><div class = 'user_y_axis'></div></div>
+<div class = "puzzle_show_right"><div class = 'prepcloud_y_axis'></div></div>
+<h2>Attempts per puzzle</h2>
+<div class = "puzzle_show_left2"><div class = 'user_y_axis2'></div></div>
+<div class = "puzzle_show_right2"><div class = 'prepcloud_y_axis2'></div></div>
+<h2>Resets per puzzle</h2>
+<div class = "puzzle_show_left3"><div class = 'user_y_axis3'></div></div>
+<div class = "puzzle_show_right3"><div class = 'prepcloud_y_axis3'></div></div>
+</div>
+
+<script type="text/javascript" src="/javascripts/d3/d3.min.js"></script>
+<script type="text/javascript" src="/javascripts/controllers/puzzles_show.js"></script>
+<script>
+//Enfant Terrible
+$(function() {
+  user_data.length = 0;
+  var punta = $('#terrible_score1').html();
+  var punta2 = $('#terrible_score2').html();
+  var punta3 = $('#terrible_score3').html();
+  var punta4 = $('#terrible_score4').html();
+  var punta5 = $('#terrible_score5').html();
+  user_data.push(punta);
+  user_data.push(punta2);
+  user_data.push(punta3);
+  user_data.push(punta4);
+  user_data.push(punta5);
+  d3_charts('.puzzle_show_left','.user_y_axis', '.puzzle_show_right', '.prepcloud_y_axis', quarterback_data, quarterback_y_data, user_data);
+});
+
+$(function() {
+  attempts.length = 0;
+  var punta = $('#noire_attempts').html();
+  var punta2 = $('#noire_attempts2').html();
+  var punta3 = $('#noire_attempts3').html();
+  var punta4 = $('#noire_attempts4').html();
+  var punta5 = $('#noire_attempts5').html();
+  attempts.push(punta);
+  attempts.push(punta2);
+  attempts.push(punta3);
+  attempts.push(punta4);
+  attempts.push(punta5);
+  d3_charts('.puzzle_show_left2','.user_y_axis2', '.puzzle_show_right2', '.prepcloud_y_axis2', quarterback_ave_attempts, quarterback_y_attempts, attempts);
+});
+
+$(function() {
+  resets.length = 0;
+  var punta = $('#noire_resets').html();
+  var punta2 = $('#noire_resets2').html();
+  var punta3 = $('#noire_resets3').html();
+  var punta4 = $('#noire_resets4').html();
+  var punta5 = $('#noire_resets5').html();
+  resets.push(punta);
+  resets.push(punta2);
+  resets.push(punta3);
+  resets.push(punta4);
+  resets.push(punta5);
+  d3_charts('.puzzle_show_left3','.user_y_axis3', '.puzzle_show_right3', '.prepcloud_y_axis3', quarterback_ave_resets, quarterback_y_resets, resets);
+});
+</script>

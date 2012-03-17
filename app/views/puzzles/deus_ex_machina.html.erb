@@ -1,0 +1,140 @@
+<div class = 'row'>
+<div class = 'span10'>
+<div id = 'demo_frame'>
+<h1>Photo Game!</h1><br />
+  <p>Match the logical statements from the Pink Prompt to the correct notation below. Each picture you make is pinned to the bottom.</p>
+
+
+<body>
+<table class="sudoku" style="width:500px;height:440px;margin-left:0px;">
+                <div class="sudoku_mid">
+                    <tr class="r0">
+
+                        <td type = "button" onclick="photoShoot(this, 'c1');" class="c1" style="background-color:#777777;font-size:2.0em;padding-top:50px;">A_F -> O8</td>
+                        <td type = "button" onclick="photoShoot(this, 'c2');" class="c2" style="background-color:#EEEEEE;font-size:2.0em;padding-top:50px;">M_K -> <del>E5</del></td>
+                        <td type = "button" onclick="photoShoot(this, 'c3');" class="c3" style="background-color:#777777;font-size:2.0em;padding-top:50px;"><del>X3</del> -> <del>L2</del></td>
+
+                     </tr>
+                    <tr class="r1">
+
+
+
+                        <td type = "button" onclick="photoShoot(this, 'c4');" class="c4" style="background-color:#EEEEEE;font-size:2.0em;padding-top:50px;"><del>P_N</del> -> J2</td>
+                        <td type = "button" onclick="photoShoot(this, 'c5');" class="c5" style="background-color:#777777;font-size:2.0em;padding-top:50px;">B &#60;-> C</td>
+                        <td type = "button" onclick="photoShoot(this, 'c6');" class="c6" style="background-color:#EEEEEE;font-size:2.0em;padding-top:50px;">U_Y -> <del>G4</del></td>
+
+                   </tr>
+                    <tr class="r2">
+
+                        <td type = "button" onclick="photoShoot(this, 'c7');" class="c7" style="background-color:#777777;font-size:2.0em;padding-top:50px;">W -> <del>Z</del></td>
+                        <td type = "button" onclick="photoShoot(this, 'c8');" class="c8" style="background-color:#EEEEEE;font-size:2.0em;padding-top:50px;"><del>U3</del> -> <del>R9</del></td>
+                        <td type = "button" onclick="photoShoot(this, 'c9');" class="c9" style="background-color:#777777;font-size:2.0em;padding-top:50px;"><del>V</del> -> T</td>
+                    </tr>
+                </div>
+
+            </table>
+</body>
+
+
+<div class="photoShoot_bottom"><div class = "album"></div>
+</div>
+
+</div>
+<div id = "exercise_form" class = "hidden" >
+<div class = "exercise_form_title1">That's correct!</div>
+<div class = "exercise_form_title2" style="background:#88ff77;">Below is your time per puzzle</div>
+<div class = "exercise_form_title3" style="background:#66ff88;">Remember, the LSAT's all about the speed..*</div>
+
+<div class = 'user_chart' style="margin-top:15px;">
+<h3>average user's time per puzzle (in seconds)</h3>
+<div class = 'user_barchart'><div class = 'user_y_axis'></div></div>
+</div><br />
+
+<div class = 'user_chart'>
+<h3>Your average time per puzzle (in seconds)</h3>
+<div class = 'prepcloud_barchart'><div class = 'prepcloud_y_axis'></div></div>
+</div>
+
+<div class = 'user_chart' style="margin-top:15px;">
+<h3>average number of guesses per user</h3>
+<div class = 'user_barchart2'><div class = 'user_y_axis2'></div></div>
+</div><br />
+
+<div class = 'user_chart'>
+<h3>Your incorrect guesses</h3>
+<div class = 'prepcloud_barchart2'><div class = 'prepcloud_y_axis2'></div></div>
+</div>
+
+<div class = 'user_chart' style="margin-top:15px;">
+<h3>average number of resets per user</h3>
+<div class = 'user_barchart3'><div class = 'user_y_axis3'></div></div>
+</div><br />
+
+<div class = 'user_chart'>
+<h3>Your number of resets</h3>
+<div class = 'prepcloud_barchart3'><div class = 'prepcloud_y_axis3'></div></div>
+</div>
+
+<% if current_user.saved_check('Deus Ex Machina').empty? %>
+<div id = "puzzle_save_option">
+<h2>Save your results?</h2><br />
+<button class = "btn" onclick="makePuzzle();">yes</button>
+<form class ="pull-right"method='link' action='/'><button class="btn">no</button></form>
+</div>
+
+<div id = "puzzle_saved" style="margin-top:10px;" class="hidden"><p>Your results have been saved, <a href='<%= puzzle3_show_path %>'>click here</a> to see all of your results.</p></div>
+<% else %>
+<div id = "puzzle_save_option">
+<h2>You have already saved your results for this puzzle</h2>
+</div>
+<% end %>
+
+</div>
+
+<div id = "timesUp_form" class = "hidden" >
+<h1>Time's Up!</h1>
+<h2>Would you like to repeat the puzzle or exit?</h2><br /><br />
+<p>Try as many times as it takes you to get it right</p><br />
+
+<div class = "btn"><a><%= link_to "repeat", puzzle3_path %></a></div>
+<div class = "btn" style="float:right;"><a><%= link_to "exit", root_path %></a></div>
+
+</div>
+</div>
+ <div class="span4">
+    <%= render 'shared/puzzle_panel' %>
+  </div>
+
+</div>
+
+<div id="dialog-message">
+            <div class="modal-header">
+              <h3>Deus Ex Machina</h3>
+            </div>
+            <div class="modal-body">
+<p>Our most difficult puzzle to date with four games to improve your speed and knowledge of logical statements.  Two ask you to match logic statements with their symbol notation, another has you filling in the missing pieces of logical statements, and a forth requires that you play an instrument in the correct order based on a set of rules.</p>
+            </div>
+            <div class="modal-footer">
+              <button onclick="cierra_dialog('#dialog-message');" class="btn danger">Begin Quiz!</button>
+            </div>
+          </div>
+
+
+<script src="https://www.google.com/jsapi?key=ABQIAAAA5TxFSmgopWCajQNyTIoT8hStcRCLXCr0vyCftWOM2tQQST_-5hSVq0YI4pspGoXIGxDHdbH4onBpWw" type="text/javascript"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script type="text/javascript">google.load("jqueryui", "1.8.16");</script>
+<script type="text/javascript" src="javascripts/jquery/widgetDialogPositionProgressbar.min.js"></script>
+<script type="text/javascript" src="javascripts/jquery/jquery.ui.mouse.min.js"></script>
+<script type="text/javascript" src="javascripts/jquery/jquery.ui.sortable.min.js"></script>
+<script type="text/javascript" src="javascripts/jquery/draggableDroppable.min.js"></script>
+<script type="text/javascript" src="javascripts/controllers/deus_ex_machina/deus_ex_machina.min.js"></script>
+<script type="text/javascript" src="/javascripts/d3/d3.min.js"></script>
+<script type="text/javascript" src="javascripts/controllers/deus_ex_machina/game1.js"></script>
+<script src="/javascripts/controllers/backbonePuzzles.js"></script>
+<script>
+function makePuzzle(){
+        Puzzles.create({title:'Deus Ex Machina', latency:user_data, attempts:attempts, resets:resets, done:true, user_id:'<%= current_user.id %>'});
+        $('#puzzle_saved').removeClass("hidden");
+        $('#puzzle_save_option').addClass("hidden");
+}
+</script>

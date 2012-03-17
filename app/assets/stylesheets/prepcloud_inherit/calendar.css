@@ -1,0 +1,70 @@
+#hour_picker.hidden{
+  display:none;
+}
+.selected_date{
+}
+.wc-container.hidden{
+  display:none;
+}
+#nextPrev.hidden{
+  display:none;
+}
+.cal_table{
+  background:#C1DDFD;
+}
+.cal_table2{
+  background:#f5f5f5;
+}
+.cal_previous{
+  background:#333333;
+  color:white;
+  font-size:1.0em;
+}
+#cal_previous2{
+  font-size:1.3em;
+}
+#cal_previous2.hidden{
+  display:none;
+}
+.cal_next2{
+  font-size:1.1em;
+  float:right;
+  margin-top:5px;
+}
+.cal_next{
+  background:#333333;
+  color:white;
+  font-size:1.1em;
+  float:right;
+}
+#hidden_hour_div.hidden{
+  display: none;
+}
+#schedule_form2.hidden{
+  display: none;
+}
+input#schedules_date{
+  background:#000000;
+  font-size:1.3em;
+}
+input#schedules_hour{
+  background:#000000;
+  font-size:1.3em;
+}
+#steps_table1, #steps_table2, #steps_table3, #steps_table4, #steps_table5{
+  font-weight: bold;
+  font-family: 'Candal', sans-serif;
+}
+#subData{
+  float:left;
+  font-size: 1.3em;
+  }
+#final_date, #final_hour{
+  background:black;
+  text-align: center;
+  width: 170px;
+  height: 50px;
+  }
+#final_date h4, #final_hour h4{
+  color:white;
+  }

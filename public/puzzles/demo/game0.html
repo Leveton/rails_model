@@ -1,0 +1,68 @@
+<script>
+$(function() {
+		$( ".draggable" ).draggable({
+
+		  start: function( event, ui ) {
+		    $( this )
+		       littlebox = $( this ).attr('id');
+		       }
+		        });
+		$( ".droppable2" ).droppable({
+			drop: function( event, ui ) {
+				$( this )
+				  $('#demo_frame').css('background-color','yellow');
+          setTimeout(function(){$('#demo_frame').css('background-color','#FFF')},180);
+				  bigbox = $( this ).attr('id')
+				  if (arrayLength(boxes) == true){
+				    $('#score_right').append("<p>" + (littlebox) + (bigbox) + "</p>");
+			      boxes.push((littlebox) + (bigbox));
+			      }
+			    boxColors2(littlebox)
+				  }
+		});
+	});
+</script>
+
+<h1>drag the blocks into the correct space based on these rules:</h1>
+
+
+<p>1) M is in the less crowded space<br />
+
+2) N and K must be in the same space<br />
+
+3) If a space does not contain L, then that space contains J<br />
+
+4) M is in Space 1<br />
+
+5) K and J cannot be together<br /></p>
+<div class="draggable" id = "J">
+	<p>J</p>
+</div>
+<div class="draggable" id = "K">
+	<p>K</p>
+</div>
+<div class="draggable" id = "L">
+	<p>L</p>
+</div>
+<div class="draggable" id = "M">
+	<p>M</p>
+</div>
+<div class="draggable" id = "N">
+	<p>N</p>
+</div><br />
+</div>
+
+<div class = "demo_frame_bottom" style="background:transparent;">
+<div class="droppable2" style = "background-color:#102C31" id = "1">
+	<p>Space 1</p>
+</div>
+<div class="droppable2" style = "background-color:#102C31" id = "2">
+	<p>Space 2</p>
+</div>
+
+<div class="derecha_holder" style="width:200px;height:300px;background:transparent;"></div>
+<div style = 'clear:both;'>
+<button class = "btn" onclick="compareAnswers(boxes, allboxes2, '#demo_frame', 'puzzles/demo/game1', 'puzzles/demo/game0', '#score_right p');">check</button>
+<button class = "btn" style = "float:right;" onclick = "resetGame('#demo_frame', 'puzzles/demo/game0', '#score_right p', boxes);" >reset</button>
+</div>
+</div>

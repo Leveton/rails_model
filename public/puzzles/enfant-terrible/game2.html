@@ -1,0 +1,52 @@
+<script type="text/javascript" src="javascripts/controllers/enfant_terrible/game2.js"></script>
+
+<div class = "vert_game" >
+<div class = "vert_game_left">
+<h1>Put the people in the correct bus</h1>
+
+<p>1) Each bus has a driver and at least one other person<br /><br />
+
+2) If the red driver's in the white bus, Pink Hat is in the yellow bus<br /><br />
+
+3) Blue drives the yellow bus<br />
+
+4) the drivers wear no hats<br />
+
+5) Cowboy is with Pink Hat<br /></p>
+
+<div class="draggable2" style="background-color:transparent;" id = "Cowboy">
+	<p><img src="/images/cowboy_hat.png" alt="Bus"/></p>
+</div>
+<div class="draggable2" style="background-color:transparent;" id = "Pink Hat">
+	<p><img src="/images/little_girl2.png" alt="Bus"/></p>
+</div>
+<div class="draggable2" style="background-color:transparent;" id = "Cap">
+	<p><img src="/images/backward_cap.png" alt="Bus"/></p>
+</div>
+<div class="draggable2" style="background-color:transparent;" id = "Red">
+	<p><img src="/images/bus_driver1.png" alt="Bus"/></p>
+</div>
+<div class="draggable2" style="background-color:transparent;" id = "Blue">
+	<p><img src="/images/bus_driver2.png" alt="Bus"/></p>
+</div>
+
+
+</div>
+
+<div class = "vert_game_right">
+
+<div class="droppable3" style = "background-color:#34489E;height:120px;padding:0em;" id = "3">
+	<p><img src="/images/school_bus2.png" alt="Bus"/></p>
+</div>
+<div class="droppable3" style = "background-color:#34489E;height:120px;padding:0em;" id = "2">
+	<p><img src="/images/school_bus.png" alt="Bus"/></p>
+</div>
+
+</div>
+  <button class = "btn" onclick = "compareAnswers(boxes2, allboxes2, '#demo_frame', 'puzzles/enfant-terrible/game4', '#score_right p', 'puzzles/enfant-terrible/game2');" >check</button>
+  <button class = "btn" style = "float:right;" onclick = "resetGame('#demo_frame', 'puzzles/enfant-terrible/game2', '#score_right p', boxes2);" >reset</button>
+
+</div>
+
+
+</div>

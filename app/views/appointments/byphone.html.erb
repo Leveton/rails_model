@@ -1,0 +1,103 @@
+<link rel="stylesheet" href="/stylesheets/calendar.css">
+<%= csrf_meta_tag %>
+<table>
+<tr>
+<td id = 'steps_table1' style = 'background:#00FFCC;'>Step 1<br /><br />Choose Date</td>
+<td id = 'steps_table2'>Step 2<br /><br />Choose Hour</td>
+<td id = 'steps_table3'>Step 3<br /><br />Confirm Time</td>
+<td id = 'steps_table4'>Step 4<br /><br />Pay with PayPal</td>
+<td id = 'steps_table5'>Step 5<br /><br />Confirmation</td>
+</tr>
+</table><br />
+
+<div id="datepicker"></div>
+
+<div id='hour_picker'>
+<table border="1">
+<tr>
+<th class = 'selected_date'></th>
+</tr>
+<tr class = 'cal_table'>
+<td type ="button" onclick = "nextPage('0700', this.id)" class = '0700' id = "7:00 am">7:00 am</td>
+</tr>
+<tr class = "cal_table2">
+<td type ="button" onclick = "nextPage('0800', this.id)" class = '0800' id = "8:00 am">8:00 am</td>
+</tr>
+<tr class = "cal_table">
+<td type ="button" onclick = "nextPage('0900', this.id)" class = '0900' id = "9:00 am">9:00 am</td>
+</tr>
+<tr class = "cal_table2">
+<td type ="button" onclick = "nextPage('1000', this.id)" class = '1000' id = "10:00 am">10:00 am</td>
+</tr>
+<tr class = "cal_table">
+<td type ="button" onclick = "nextPage('1100', this.id)" class = '1100' id = "11:00 am">11:00 am</td>
+</tr>
+<tr class = "cal_table2">
+<td type ="button" onclick = "nextPage('1200', this.id)" class = '1200' id = "12:00 pm">12:00 pm</td>
+</tr>
+<tr class = "cal_table">
+<td type ="button" onclick = "nextPage('1300', this.id)" class = '1300' id = "1:00 pm">1:00 pm</td>
+</tr>
+<tr class = "cal_table2">
+<td type ="button" onclick = "nextPage('1400', this.id)" class = '1400' id = "2:00 pm">2:00 pm</td>
+</tr>
+<tr class = "cal_table">
+<td type ="button" onclick = "nextPage('1500', this.id)" class = '1500' id = "3:00 pm">3:00 pm</td>
+</tr>
+<tr class = "cal_table2">
+<td type ="button" onclick = "nextPage('1600', this.id)" class = '1600' id = "4:00 pm">4:00 pm</td>
+</tr>
+<tr class = "cal_table">
+<td type ="button" onclick = "nextPage('1700', this.id)" class = '1700' id = "5:00 pm">5:00 pm</td>
+</tr>
+<tr class = "cal_table2">
+<td type ="button" onclick = "nextPage('1800', this.id)" class = '1800' id = "6:00 pm">6:00 pm</td>
+</tr>
+
+
+<td class = 'cal_previous'><form method='link' action="/tutoring/byphone"><button class='btn'>back</button></form></td>
+
+</table>
+</div>
+
+<div id='cal_previous2'><button class='btn' onclick='prevPage();'>back</button></div><br />
+
+            <div id="appointment_form">
+              <%= form_tag("/appointments", :method => "post") do %>
+ 
+                            
+                            <br />
+                            <div id ="scheduled_date">scheduled date</div><br />
+                            <div id = "final_date"><h4></h4></div>
+                            <input id="appointments_date" name="appointments[date]" type="hidden" />
+                            <br />
+                            <br />
+                            
+                            <div id ="scheduled_hour">scheduled hour</div><br />
+                            <div id = "final_hour"><h4></h4></div>
+                            <input id="appointments_hour" name="appointments[hour]" type="hidden" />
+                            <br />
+                            <br />
+                            
+                            <input type="radio" name="appointments[tutoring_type]" value="by phone" checked> method - by phone
+                            <br />
+                            <br />
+                            <br />
+                            <div id ="scheduled_hour">phone number (required) format: 000-000-0000</div><br />
+                            <input id="phone_number" name="appointments[phone_number]" type="text" />  
+                            <br />
+                            <br />
+                            <input id="user_id" name="appointments[user_id]" value = "<%= current_user.id %>" type="hidden" />  
+                            <input id="location" name="appointments[location]" value = "home" type="hidden" />  
+                            <%= submit_tag("Submit", :class => "btn") %>
+               <% end %>
+
+</div>
+      
+<div id = "hidden_hour_div"></div>  
+
+	<script src="/javascripts/jquery/jquery.ui.widget.min.js"></script>
+	<script src="/javascripts/jquery/jquery.ui.datepicker.min.js"></script>
+	<script src="/javascripts/appointment.js"></script>
+
+

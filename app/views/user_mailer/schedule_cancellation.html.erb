@@ -1,0 +1,12 @@
+<p>Hi, <%=@username %>,</p>
+
+You have received this email because you cancelled a tutoring session with prepcloud.com with the following details:<br /><br />
+
+cancelled date | <%=@schedule_date %><br />
+
+cancelled hour | <%=@schedule_hour %><br /><br />
+
+If you did not cancel this appointment, <%= link_to "please let us know", "www.prepcloud.com/contact_us" %> so that we can reschedule.<br /><br />
+
+The prepcloud team
+

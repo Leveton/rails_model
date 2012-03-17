@@ -1,0 +1,32 @@
+<script type="text/javascript" src="javascripts/controllers/enfant_terrible/game3.js"></script>
+
+<h3>Sort the colors in order based on the following rules</h3><br />
+<p>
+1) blue is above black<br />
+2) pink is on the very bottom<br />
+3) if purple is below red, then green is above red<br />
+4) purple is next to pink<br />
+5) black is above green<br />
+</p>
+
+<div class="demo">
+
+<ul class="sortable1" >
+
+	<li class="ui-state-default" style="background-color:blue;width:200px;height:30px;" id="foo_1"></li>
+	<li class="ui-state-default" style="background-color:green;width:200px;height:30px;" id="foo_2"></li>
+	<li class="ui-state-default" style="background-color:purple;width:200px;height:30px;" id="foo_3"></li>
+</ul>
+
+<ul class="sortable2">
+	<li class="ui-state-highlight" style="background-color:pink;width:200px;height:30px;" id="foo_4"></li>
+	<li class="ui-state-highlight" style="background-color:black;width:200px;height:30px;" id="foo_5"></li>
+	<li class="ui-state-highlight" style="background-color:red;width:200px;height:30px;" id="foo_6"></li>
+</ul>
+
+</div>
+
+<div style="clear:both;">
+<button class = "btn" style = "margin:10px;" onclick = "compareAnswers3(boxes3, allboxes3, '#demo_frame', 'puzzles/enfant-terrible/game2', '#score_right p', 'puzzles/enfant-terrible/game3');" >check</button>
+<button class = "btn" style = "margin:10px;" onclick = "resetGame('#demo_frame', 'puzzles/enfant-terrible/game3');" >reset</button>
+</div>

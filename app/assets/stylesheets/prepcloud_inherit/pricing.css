@@ -1,0 +1,145 @@
+.planWrapper {
+	margin-top: 65px;
+	padding: 0 0 50px 65px;
+}
+ul.plans {
+	color: #27461F;
+	display: table;
+	float: right;
+	font-size: 13px;
+	width:830px;
+	
+}
+ul.plans li.plan {
+	float: left;
+	width:218px;
+	
+}
+
+ul.planOptions {
+	padding-left: 6px;
+	
+}
+ul.planOptions li{
+	background: #F4DCA5;
+	padding: 5px 0 0 30px;
+	height: 25px;
+	margin: 0 auto;
+	margin-left: 4px;
+	display: block;
+	width: 180px;
+}
+ul.planOptions li.alt{
+	background-color: none!important;
+}
+ul.planOptions li.yes {
+	background: #F4DCA5 url(../images/candy/yes.png) top left no-repeat;
+}
+ul.planOptions li.alt.yes {
+	background: url(../images/candy/yes.png) top left no-repeat;
+}
+li.mostPopular ul.planOptions li.yes {
+	background: #F4DCA5 url(../images/candy/mostPopYes.png) top left no-repeat;
+}
+li.mostPopular ul.planOptions li.alt.yes {
+	background: url(../images/candy/mostPopYes.png) top left no-repeat;
+}
+ul.planOptions li.no {
+	background: #F4DCA5 url(../images/candy/no.png) top left no-repeat;
+}
+ul.planOptions li.alt.no {
+	background: url(../images/candy/no.png) top left no-repeat;
+}
+li.mostPopular ul.planOptions li.no {
+	background: #F4DCA5 url(../images/candy/mostPopNo.png) top left no-repeat;
+	
+}
+li.mostPopular ul.planOptions li.alt.no {
+	background: url(../images/candy/mostPopNo.png) top left no-repeat;
+}
+
+.planTop {
+	height: 30px;
+	text-align: center;
+	color: #FFF;
+	font-weight: bolder;
+	padding-top: 13px;
+	background:url(../images/candy/plansTop.png) top center no-repeat;
+}
+.planMid {
+	background:url(../images/candy/plansMid.png) center repeat-y;
+}
+.planBot {
+	background:url(../images/candy/plansBot.png) bottom center no-repeat;
+	padding-top: 10px;
+	text-align: center;
+}
+li.mostPopular {
+	color: #27461F;
+	
+}
+li.mostPopular .planTop {
+	background:url(../images/candy/mostPopPlansTop.png) top center no-repeat;
+}
+li.mostPopular .planMid {
+	background:url(../images/candy/mostPopPlansMid.png) center repeat-y;
+}
+li.mostPopular .planBot {
+	background:url(../images/candy/mostPopPlansBot.png) bottom center no-repeat;
+}
+.planBot a {
+	background: #27461F url(../images/candy/whiteStripes.png);
+	color: #FFF!important;
+	font-size: 13;
+	font-weight: bold;
+	display: block;
+	width: 150px;
+	height: 30px;
+	margin: 0 auto;
+	padding-top: 10px;
+	text-align: center;
+	text-transform: uppercase;
+
+	-webkit-border-radius:5px; 
+	-moz-border-radius:5px; 
+	border-radius:5px;
+	transition: all 0.3s ease-in-out; 
+	-webkit-transition: all 0.3s ease-in-out; 
+	-moz-transition: all 0.3s ease-in-out;	
+	border: 3px solid #27461F;
+	
+}
+.planBot a:hover {
+	background-color: #34489E;
+}
+
+li.mostPopular .planBot a {
+	background: #27461F url(../images/candy/whiteStripes.png);
+	border: 3px solid #27461F;
+}
+li.mostPopular .planBot a:hover {
+	background-color: #34489E;
+}
+#priceDiv p.mainTag {
+	text-align: center;
+}
+p.planTitle {
+	font-size:22px;
+	font-weight: 300;
+	text-align: center;
+	line-height: 40px;
+}
+p.planPrice {
+	font-size: 34px;
+	text-align: center;
+	font-weight: bold;
+	line-height: 50px;
+}
+/****/
+.head_white {
+    background: url("../../images/main_head.png") repeat scroll 0 0 transparent;
+    border-bottom: 5px solid #DCE2D9;
+}
+.main_head {
+ border-bottom: none;
+}

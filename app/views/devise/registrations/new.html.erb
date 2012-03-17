@@ -1,0 +1,38 @@
+<%= devise_error_messages! %>
+<div class="row">
+<div class="span8">
+  <h3>Create a PrepCloud account</h3>
+
+  <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
+
+
+<div><%= f.label :username %><br /><br />
+<%= f.text_field :username %></div>
+
+ <div><%= f.label :email %><br /><br />
+<%= f.email_field :email %></div>
+
+ <div><%= f.label :password %><br /><br />
+<%= f.password_field :password %></div>
+
+<div><%= f.label :password %><br /><br />           
+<%= f.password_field :password_confirmation %></div><br />
+By registering you agree to our <%= link_to 'terms and conditions', legal_path, :rel => "facebox[.facebig]" %><br /><br />
+ <div class = "btn"><%= f.submit "Sign up" %></div>
+<% end %>
+
+<%= render :partial => "devise/shared/links" %>
+</div>
+<div class="span6">
+</div>
+<h3>Or sign in with one of these providers</h3><br />
+
+<div class ='fb_connect'><a><% facebooks = image_tag("fb-login-button.png", :alt => "login with facebook") %></a>
+  <%= link_to facebooks, user_omniauth_authorize_path(:facebook) %><br /><br /></div
+
+<a><% facebooks = image_tag("google_logo.png", :alt => "login with google") %></a>
+  <%= link_to facebooks, user_omniauth_authorize_path(:google) %><br /><br /><br />
+
+<a><% yahoos = image_tag("yahoo.png", :alt => "login with yahoo") %></a>
+  <%= link_to yahoos, user_omniauth_authorize_path(:yahoo, :openid_url => "https://me.yahoo.com") %>
+</div>

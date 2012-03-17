@@ -1,0 +1,39 @@
+<script type="text/javascript" src="/javascripts/controllers/demo/game1.min.js"></script>
+<script>
+$('#score_right p').empty();
+</script>
+<h1>Russian Dolls</h1>
+
+
+
+<p>Drag the objects into the correct doll<br />
+
+1) Each doll must have at least one object<br />
+
+2) purple is not alone in a doll<br />
+
+3) No doll has the same amount of objects as its adjacent doll<br />
+
+4) pink is in a smaller doll than purple<br />
+
+5) yellow's doll touches only one other doll<br /></p>
+
+<div class="doll_block"><div class="doll_circle" style="z-index:4; position:absolute;background:red;" id = "red"></div></div>
+<div class="doll_block" style ="margin-left:90px;"><div class="doll_circle" style="z-index:4; position:absolute;background:yellow;" id = "yellow"></div></div>
+<div class="doll_block" style ="margin-left:180px;"><div class="doll_circle" style="z-index:4; position:absolute;background:purple;" id = "purple"></div></div>
+<div class="doll_block" style ="margin-left:270px;"><div class="doll_circle" style="z-index:4; position:absolute;background:pink" id = "pink"></div></div>
+
+
+<div class = demo_frame_bottom style = "height:370px;background:transparent;margin-top:50px;">
+<div class="droppable0" style="background:transparent;width:330px;" id = "1">
+	<p><img src="/images/bigDoll.png" alt="Doll"/></p>
+	<div class="droppable_midDoll" id = "2" ><p><img src="/images/middleDoll.png" alt="Doll"/></p>
+	  <div class="droppable_lilDoll" id = "3"><p><img src="/images/littleDoll.png" alt="Doll"/></p></div>
+	</div>
+</div>
+</div>
+<div style="clear:both;">
+<button class = "btn" onclick="compareAnswers(boxes, allboxes2, '#demo_frame', 'puzzles/demo/game2', 'puzzles/demo/game1', '#score_right_p');"">check</button>
+<button class = "btn" style = "float:right;" onclick = "resetGame('#demo_frame', 'puzzles/demo/game1', '#score_right p', boxes);" >reset</button>
+</div>
+</div>

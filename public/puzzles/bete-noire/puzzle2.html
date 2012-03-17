@@ -1,0 +1,48 @@
+<script type="text/javascript" src="/javascripts/controllers/bete_noire/game2.js"></script>
+
+<body>
+
+  <h1>Put the numbers 1 - 8 in their correct blocks</h1>
+
+<div class = "demo_frame_top">
+<p>1) 7 is ahead of 6<br />
+
+2) no number is to the left of its next consecutive number<br />
+
+3) 1 and 3 are next to each other<br />
+
+4) the first 3 numbers add up to 13<br />
+
+5) 5 is to the left of 3<br />
+
+6) 2 and 4 are not next to each other</p>
+</div>
+    <div id="doc2" >
+
+        <div id="sudoku_content" >
+
+            <table class="sudoku2" cellpadding="0" cellspacing="0" >
+                <tbody class="x0" >
+
+                    <tr class="r1">
+                        <td class="x1"><input type="text" id="c10"></td>
+                        <td class="x2"><input type="text" id="c14" value="6" class="disabled" disabled="disabled"></td>
+                        <td class="x3"><input type="text" id="c12"></td>
+                        <td class="x4"><input type="text" id="c13"></td>
+                        <td class="x5"><input type="text" id="c14"></td>
+                        <td class="x6"><input type="text" id="c15" value="3" class="disabled" disabled="disabled"></td>
+                        <td class="x7"><input type="text" id="c16"></td>
+                        <td class="x8"><input type="text" id="c18" value="8" class="disabled" disabled="disabled"></td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+        </div>
+
+    </div>
+
+<div style="width:300px;height:500px;background:transparent;"></div>
+  <button class = "btn" onclick = "sudotiku('#demo_frame', 'puzzles/bete-noire/puzzle3');" >check</button>
+  <button class = "btn" style = "float:right;" onclick = "resetGameSudotiku('#demo_frame', 'puzzles/bete-noire/puzzle2');" >reset</button>
+</body>

@@ -1,0 +1,24 @@
+<body>
+
+<% if user_signed_in? %>
+  <table class="front" summary="For signed-in users">
+    <tr>
+      <td class="main">
+        <h1 class="assessments">What's up?</h1>
+        <%= render 'devise/shared/assessments_form' %>
+        <%= render 'devise/shared/feed' %>
+      </td>
+      
+      <%= render 'layouts/middle' %>
+      
+      <td class="sidebar round">
+        <%= render 'devise/shared/user_info' %>
+        <%= render 'devise/shared/stats' %>
+      </td>
+    </tr>
+  </table>
+<% else %>
+   <%= render 'layouts/middle' %>
+  <%= link_to "Sign up now!", signup_path, :class => "signup_button round" %>
+<% end %>
+</body>

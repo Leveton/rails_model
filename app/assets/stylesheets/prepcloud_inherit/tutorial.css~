@@ -1,0 +1,110 @@
+.tutorial_frame{
+
+ }
+ .tutorial_space{
+ width:550px;
+ height: 35px;
+ background: transparent;
+ clear:both;
+ }
+.tutorial_frame h2{
+  color: #000;
+  font-size: 1.2em;
+  }
+.tutorial_frame p{
+  font-size:1.2em;
+  }
+#tutorial_left1, #tutorial_left2, #tutorial_left3, #tutorial_left4, #tutorial_left5, #tutorial_left6, #tutorial_left7, #tutorial_left8, #tutorial_left9{
+  width: 400px;
+  height: 150px;
+  float:left;
+  border: 2px solid #34489E;
+  }
+#tutorial_left1 a, #tutorial_left1 p, #tutorial_left2 a, #tutorial_left2 p, #tutorial_left3 a, #tutorial_left3 p, #tutorial_left4 a, #tutorial_left4 p, #tutorial_left5 a, #tutorial_left5 p, #tutorial_left6 a, #tutorial_left6 p, #tutorial_left7 a, #tutorial_left7 p, #tutorial_left8 a, #tutorial_left8 p, #tutorial_left9 a, #tutorial_left9 p{
+  color: blue;
+  font-weight: bold;
+  font-size: 1.2em;
+  margin-top:10px;
+  margin-left:4px;
+  }
+#tutorial_right1, #tutorial_right2, #tutorial_right3, #tutorial_right4, #tutorial_right5, #tutorial_right6, #tutorial_right7, #tutorial_right8, #tutorial_right9{
+  width: 400px;
+  height: 150px;
+  float:right;
+  border: 2px solid #34489E;
+  color: red;
+  font-weight: bold;
+  font-size: 2.6em;
+  text-align: center;
+  }
+#tutorial_right1 p, #tutorial_right2 p, #tutorial_right3 p, #tutorial_right4 p, #tutorial_right5 p, #tutorial_right6 p, #tutorial_right7 p, #tutorial_right8 p, #tutorial_right9 p{
+  margin-top: 4px;
+  float:left;
+  margin-left:25px;
+  }
+#tutorial_right1 h6, #tutorial_right2 h6, #tutorial_right3 h6, #tutorial_right4 h6, #tutorial_right5 h6, #tutorial_right6 h6, #tutorial_right7 h6, #tutorial_right8 h6, #tutorial_right9 h6{
+  margin-top: 4px;
+  float:left;
+  margin-left:25px;
+  font-size: 1.5em;
+  }
+#tutorial_right1 h7, #tutorial_right2 h7, #tutorial_right3 h7, #tutorial_right4 h7, #tutorial_right5 h7, #tutorial_right6 h7, #tutorial_right7 h7, #tutorial_right8 h7, #tutorial_right9 h7{
+  margin-top: 7px;
+  float:left;
+  margin-left:25px;
+  font-size: 1.2em;
+  }
+#tutorial_break{
+  height:220px;
+
+  background:#FCD116;
+  font-size:1.2em;
+  font-weight:bold;
+  border: 2px solid #34489E;
+  }
+#tutorial_break h9{
+  color:red;
+  }
+
+contact_body {
+	font-size: 62.5%;
+	font-family: 'Nunito', arial, serif;
+}
+#contact-area {
+	width: 500px;
+	margin-top: 25px;
+}
+
+#contact-area input, #contact-area textarea {
+	padding: 5px;
+	width: 471px;
+	font-family: 'Nunito', arial, serif;
+	font-size: 1.1em;
+	margin: 0px 0px 10px 0px;
+	border: 2px solid #ccc;
+}
+
+#contact-area textarea {
+	height: 250px;
+}
+
+#contact-area textarea:focus, #contact-area input:focus {
+	border: 2px solid #900;
+}
+#contact-area label {
+	float: left;
+	text-align: left;
+	margin-right: 15px;
+	width: 100px;
+	padding-top: 5px;
+	font-size: 1.1em;
+}
+input#contact_us_contact_email{
+  color: #000000;
+  height: 20px!important;
+  }
+input#contact_us_contact_submit{
+  width: 160px;
+  height: 43px;
+  background-color: #333333;
+  }

@@ -1,0 +1,63 @@
+<script>
+
+	$(function() {
+		$( "#progressbar" ).progressbar({
+			value: 25
+		});
+		$('.photoShoot_bottom').hide();
+	});
+
+	$(function() {
+	$('.boxgrid.slideright p').empty();
+	$('.boxgrid.slideright p').html('key 3 is played after key 6');
+ });
+</script>
+
+<h1>Piano Keys!<br />Play the keys in the correct order</h1>
+
+<div class = "demo_frame_top" style="height:100px;">
+<p>1) key 5 is played last<br />
+
+2) The middle two keys played add up to eight<br />
+
+3) key 1 is played after key 4 and before key 2<br />
+
+4) the key played after 6 and the key played before 6 add up to 6<br /></p>
+</div>
+    <div id="doc2" >
+
+        <div id="sudoku_content" >
+
+<table class="piano_keys" cellpadding="0" cellspacing="0" >
+  <tbody class="x0" >
+      <tr class="r1">
+      <td class="x1"><input type="text" id="c10" value="1" class="disabled" disabled="disabled"><button class = "black_key" onclick = "keyHighlight('.x1','red', 'key 1');" ></button></td>
+      <td class="x2"><input type="text" id="c14" value="2" class="disabled" disabled="disabled"><button class = "black_key" onclick = "keyHighlight('.x2','blue', 'key 2');"></button></td>
+      <td class="x3"><input type="text" id="c12" value="3" class="disabled" disabled="disabled"><button class = "black_key" onclick = "keyHighlight('.x3','green', 'key 3');"></button></td>
+      <td class="x4"><input type="text" id="c13" value="4" class="disabled" disabled="disabled"><button class = "black_key" onclick = "keyHighlight('.x4','yellow', 'key 4');"></button></td>
+      <td class="x5"><input type="text" id="c14" value="5" class="disabled" disabled="disabled"><button class = "black_key" onclick = "keyHighlight('.x5','purple', 'key 5');"></button></td>
+      <td class="x6"><input type="text" id="c15" value="6" class="disabled" disabled="disabled"><button class = "black_key" onclick = "keyHighlight('.x6','pink', 'key 6');"></button></td>
+    </tr>
+  </tbody>
+</table>
+        </div>
+
+    </div>
+
+
+<div id = "answer_form">
+  <div id = "key1"></div>
+  <div id = "key2"></div>
+  <div id = "key3"></div>
+  <div id = "key4"></div>
+  <div id = "key5"></div>
+  <div id = "key6"></div>
+  </div>
+
+<div style="clear:both;">
+<button class = "btn" onclick = "compareAnswers3(boxes, allboxes1, '#demo_frame', 'puzzles/deus_ex_machina/game3', '#score_right p', 'puzzles/deus_ex_machina/game2');" >check</button>
+<button class = "btn" onclick = "resetGame('#demo_frame', 'puzzles/deus_ex_machina/game2', '#answer_form', boxes);" >reset</button>
+</div>
+<div style="width:300px;height:70px;background:transparent;"></div>
+</div>
+</div>

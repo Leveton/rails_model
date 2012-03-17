@@ -1,0 +1,22 @@
+</script>
+<div class="topbar">
+      <div class="fill">
+        <div class="container">
+          <a class="brand" href="/">Derecha<img src="/images/logo.png" /></a>
+          <ul class="nav">
+            <li><a href="/tutorial">Tutorial</a></li>
+            <li><a href="/contact_us">Contact</a></li>
+            <li><a href="/links">Links</a></li>
+          </ul>
+          <% unless user_signed_in? %>
+           <form class="pull-right" style="margin-top:5px;margin-right:3px;"method='link' action='<%= user_omniauth_authorize_path(:facebook) %>'><button class = 'btn2'><%= image_tag("facebook_button2.png")%></button></form>
+           <form class="pull-right" style="margin-top:6px;margin-right:3px;"method='link' action='<%= new_user_registration_path %>'><button class="btn">Sign up</button></form>
+           <form class="pull-right" style="margin-top:6px;margin-right:3px;"method='link' action='<%= new_user_session_path %>'><button class="btn">Sign in</button></form>
+          <% else %>
+           <form class="pull-right" style="margin-top:6px;margin-right:3px;"method='link' action='/logout'><button class="btn">Log Out</button></form>
+           <form class="pull-right" style="margin-top:6px;margin-right:3px;" method='link' action='<%= user_path(current_user.id) %>'><button class="btn">Account</button></form>
+           <form class="pull-right" style="margin-top:6px;margin-right:3px;"method='link' action='<%= puzzle_path(current_user.id) %>'><button class="btn">Your Stats</button></form>
+          <% end %>
+        </div>
+      </div>
+    </div>

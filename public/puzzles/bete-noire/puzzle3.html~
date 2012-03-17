@@ -1,0 +1,57 @@
+<script type="text/javascript" src="/javascripts/controllers/bete_noire/game3.js"></script>
+
+<div class = "vert_game" >
+<div class = "vert_game_left">
+<h1>Put the blocks in their correct floor</h1>
+
+<p>1) J has no blocks above it<br />
+
+2) N and M are separated by 2 floors<br />
+
+3) K is with L<br />
+
+4) I is one floor above N<br />
+
+5) no 2 consecutive floors have more than 4 blocks<br /></p>
+
+<div class="draggable2" id = "I">
+	<p>I</p>
+</div>
+<div class="draggable2" id = "J">
+	<p>J</p>
+</div>
+<div class="draggable2" id = "K">
+	<p>K</p>
+</div>
+<div class="draggable2" id = "L">
+	<p>L</p>
+</div>
+<div class="draggable2" id = "M">
+	<p>M</p>
+</div>
+<div class="draggable2" id = "N">
+	<p>N</p>
+</div><br />
+
+</div>
+
+<div class = "vert_game_right">
+
+<div class="droppable3" style = "background-color:#102C31;height:100px;" id = "3">
+	<p>3rd Floor</p>
+</div>
+<div class="droppable3" style = "background-color:#102C31;height:100px;" id = "2">
+	<p>2nd Floor</p>
+</div>
+<div class="droppable3" style = "background-color:#102C31;height:100px;" id = "1">
+	<p>1st Floor</p>
+</div>
+
+</div>
+  <button class = "btn" onclick = "compareAnswers2(boxes2, allboxes3, '#demo_frame', '#exercise_form');" >check</button>
+  <button class = "btn" onclick = "compareAnswers2(boxes2, allboxes3, '#demo_frame', '#exercise_form', '#score_right p', 'puzzles/bete-noire/puzzle3');" >check</button>
+  <button class = "btn" style = "float:right;" onclick = "resetGame('#demo_frame', 'puzzles/bete-noire/puzzle3', '#score_right p', boxes2);" >reset</button>
+</div>
+
+
+</div>

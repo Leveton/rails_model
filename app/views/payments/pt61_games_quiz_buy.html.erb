@@ -1,0 +1,17 @@
+<div class="middle">
+<%= render 'devise/shared/left_column' %>
+<div class="con_cen">
+<div class="choices">
+
+<h5>Analytical Reasoning - Easier</h5><br />
+<p>Continue with PayPal to purchase an eleven-question Analytical Reasoning quiz for $1</p><br />
+
+<p>
+  <%= link_to image_tag('https://www.paypal.com/en_US/i/btn/btn_xpressCheckout.gif'), :action => 'checkout_quiz_AR' %><br /><br />
+<%= render 'devise/shared/payment_message' %>
+</p>
+
+</div>
+</div> 
+<%= render 'devise/shared/score_feed' %>
+</div>

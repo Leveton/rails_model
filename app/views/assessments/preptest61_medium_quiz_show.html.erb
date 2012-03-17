@@ -1,0 +1,83 @@
+<div id = 'permanent_success'><% @courses.each do |l| %>
+<%= l['quiz_name'] %><br /><br />
+<% end %>
+</div>
+<table>
+
+<tr>
+		<td>
+
+		question number
+
+		<ul><br />
+     <% @interactions.each do |l| %>
+     <%= link_to l['question_number'], :action => 'PrepTest61_medium_quiz_show', :controller => "questions" %><br /><br />
+     <% end %>
+    </ul>
+		</td>
+
+
+		<td>
+
+		time used
+
+		<ul><br />
+     <% @interactions.each do |l| %>
+     <%= l['latency'] %><br /><br />
+     <% end %>
+    </ul>
+		</td>
+
+
+		<td>
+
+		question type
+
+		<ul><br />
+     <% @courses.each do |l| %>
+     <%= l['question_type'] %><br /><br />
+     <% end %>
+    </ul>
+		</td>
+
+
+		<td>
+
+		correct answer
+
+		<ul><br />
+		<% @interactions.each do |l| %>
+		<%= l['correct_answer'] %><br /><br />
+		<% end %>
+		</ul>
+		</td>
+
+
+		<td>
+
+		your answer
+
+		<ul><br />
+		<% @interactions.each do |l| %>
+		<%= l['student_answer'] %><br /><br />
+		<% end %>
+		</ul>
+		</td>
+
+
+		<td>
+
+		date
+
+		<ul><br />
+		<% @interactions.each do |l| %>
+		<%= l['date'] %><br /><br />
+		<% end %>
+		</ul>
+		</td>
+
+
+
+	</tr>
+
+</table>

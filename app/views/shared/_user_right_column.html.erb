@@ -1,0 +1,27 @@
+<div class="span4">
+
+<h2 style = 'color:#fff;'>Hello</h2><br />
+
+<table border="1">
+<tr>
+<th><strong>Hello</strong> <%= current_user.username %>,</th>
+</tr>
+<tr>
+<td><strong><a><%= link_to "assessments:", assessment_path(current_user.id) %></a> <%= current_user.assessments.count %></strong></td>
+</tr>
+<tr>
+<td><strong><a><%= link_to "quiz credits:", official_questions_path %></a> <%= current_user.quiz_credits %></strong></td>
+</tr>
+<tr>
+<td><strong><a><%= link_to "tutoring credits:", tutoring_path %></a> <%= current_user.tutoring_credits %></strong></td>
+</tr>
+<tr>
+<td><strong><a><%= link_to "badges won:", badges_path %></a> <%= current_user.badges %></strong></td>
+</tr>
+<tr>
+<td><strong><a><%= link_to "scheduled appointments:", appointment_path(current_user.id) %></a> <%= current_user.appointments.count %></strong></td>
+</tr>
+</table>
+
+</div>
+</div>

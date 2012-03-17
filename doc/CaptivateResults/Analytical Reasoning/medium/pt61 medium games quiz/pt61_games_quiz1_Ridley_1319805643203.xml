@@ -1,0 +1,48 @@
+<Course>
+  <CompanyName value="Analytical Reasoning"/>
+  <DepartmentName value="medium"/>
+  <CourseName value="pt61 medium games quiz"/>
+  <LearnerName value="Ridley"/>
+  <LearnerID value="micahfsu@gmail.com"/>
+  <LessonName value="pt61_games_quiz1"/>
+  <QuizAttempts value="1"/>
+  <TotalQuestions value="11"/>
+  <Result>
+    <CoreData>
+      <Status value="completed"/>
+      <Location value="11"/>
+      <RawScore value="1"/>
+      <MaxScore value="11"/>
+      <MinScore value="0"/>
+      <SessionTime value="00:00:12"/>
+    </CoreData>
+    <InteractionData>
+      <Interactions>
+        <Date value="10/28/2011"/>
+        <InteractionTime value="08:40:27"/>
+        <InteractionID value="1"/>
+        <ObjectiveID value="Quiz10111"/>
+        <InteractionType value="choice"/>
+        <CorrectResponse value="A"/>
+        <StudentResponse value="E"/>
+        <Result value="W"/>
+        <Weight value="1"/>
+        <Latency value="00:00:04"/>
+        <Attempt value="1"/>
+      </Interactions>
+      <Interactions>
+        <Date value="10/28/2011"/>
+        <InteractionTime value="08:40:28"/>
+        <InteractionID value="2"/>
+        <ObjectiveID value="Quiz10111"/>
+        <InteractionType value="choice"/>
+        <CorrectResponse value="E"/>
+        <StudentResponse value="E"/>
+        <Result value="C"/>
+        <Weight value="1"/>
+        <Latency value="00:00:01"/>
+        <Attempt value="1"/>
+      </Interactions>
+    </InteractionData>
+  </Result>
+</Course>

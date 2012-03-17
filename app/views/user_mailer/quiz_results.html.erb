@@ -1,0 +1,13 @@
+<p><%=@user %>,</p>
+
+<p>Here are the details of <% @courses.each do |l| %><%= l['quiz_name'] %><% end %></p><br /><br />
+
+<table>
+  <tr><td>Section</td><td><% @courses.each do |l| %><%= l['section'] %><% end %></td></tr>
+  <tr><td>Difficulty</td><td><% @courses.each do |l| %><%= l['difficulty'] %><% end %></td></tr>
+  <tr><td>Total Questions</td><td><% @courses.each do |l| %><%= l['total_questions'] %><% end %></td></tr>
+  <tr><td>Score</td><td><% @quizdata.each do |l| %><%= l['score'] %><% end %></td></tr>
+  <tr><td>Time Taken</td><td><% @quizdata.each do |l| %><%= l['time_taken'] %><% end %></td></tr>
+</table>
+
+<%= image_tag attachments['prepcloud_email.png'].url -%>

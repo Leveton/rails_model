@@ -1,0 +1,61 @@
+<Course>
+  <CompanyName value="Logical Reasoning"/>
+  <DepartmentName value="medium"/>
+  <CourseName value="preptest61 medium quiz"/>
+  <LearnerName value="ghilly"/>
+  <LearnerID value="micahfsu@gmail.com"/>
+  <LessonName value="PrepTest61_medium_quiz"/>
+  <QuizAttempts value="1"/>
+  <TotalQuestions value="10"/>
+  <Result>
+    <CoreData>
+      <Status value="completed"/>
+      <Location value="10"/>
+      <RawScore value="0"/>
+      <MaxScore value="10"/>
+      <MinScore value="0"/>
+      <SessionTime value="00:00:19"/>
+    </CoreData>
+    <InteractionData>
+      <Interactions>
+        <Date value="11/04/2011"/>
+        <InteractionTime value="09:37:13"/>
+        <InteractionID value="1"/>
+        <ObjectiveID value="Quiz10111"/>
+        <InteractionType value="choice"/>
+        <CorrectResponse value="D"/>
+        <StudentResponse value="B"/>
+        <Result value="W"/>
+        <Weight value="1"/>
+        <Latency value="00:00:05"/>
+        <Attempt value="1"/>
+      </Interactions>
+      <Interactions>
+        <Date value="11/04/2011"/>
+        <InteractionTime value="09:37:15"/>
+        <InteractionID value="2"/>
+        <ObjectiveID value="Quiz10111"/>
+        <InteractionType value="choice"/>
+        <CorrectResponse value="E"/>
+        <StudentResponse value="C"/>
+        <Result value="W"/>
+        <Weight value="1"/>
+        <Latency value="00:00:02"/>
+        <Attempt value="1"/>
+      </Interactions>
+      <Interactions>
+        <Date value="11/04/2011"/>
+        <InteractionTime value="09:37:17"/>
+        <InteractionID value="3"/>
+        <ObjectiveID value="Quiz10111"/>
+        <InteractionType value="choice"/>
+        <CorrectResponse value="C"/>
+        <StudentResponse value="D"/>
+        <Result value="W"/>
+        <Weight value="1"/>
+        <Latency value="00:00:01"/>
+        <Attempt value="1"/>
+      </Interactions>
+    </InteractionData>
+  </Result>
+</Course>

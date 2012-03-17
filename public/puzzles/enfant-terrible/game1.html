@@ -1,0 +1,48 @@
+<script type="text/javascript" src="javascripts/controllers/enfant_terrible/game1b.js"></script>
+
+<h1>put the blocks in their correct space based on these rules:</h1>
+
+<div class = "demo_frame_top">
+<p>1) each pool must have at least one person<br />
+
+2) no men are in pool 1<br />
+
+3) no women are in pool 3<br />
+
+4) pool 2 has more people than pool 1 and pool 3 combined<br /></p>
+
+<div class="mens_room" style = "height:100px;width:50px;padding:0em;" id = "Man">
+	<p><img src="/images/mens_room.png" alt="Man"/></p>
+</div>
+<div class="mens_room" style = "height:100px;width:50px;padding:0em;" id = "Man">
+	<p><img src="/images/mens_room.png" alt="Man"/></p>
+</div>
+<div class="mens_room" style = "height:100px;width:50px;padding:0em;background-color:#B40E00;" id = "Woman">
+	<p><img src="/images/womens_room.png" alt="Woman"/></p>
+</div>
+<div class="mens_room" style = "height:100px;width:50px;padding:0em;background-color:#B40E00;" id = "Woman">
+	<p><img src="/images/womens_room.png" alt="Woman"/></p>
+</div>
+<div class="mens_room" style = "height:100px;width:50px;padding:0em;background-color:#B40E00;" id = "Woman">
+	<p><img src="/images/womens_room.png" alt="Woman"/></p>
+</div>
+</div>
+
+<div class = "demo_frame_bottom">
+<div class="pool1" style = "background-color:#34489E;width:160px;" id = "pool1">
+	<p>Pool 1</p>
+</div>
+<div class="pool1" style = "background-color:#34489E;width:160px;" id = "pool2">
+	<p>Pool 2</p>
+</div>
+<div class="pool1" style = "background-color:#34489E;width:160px;" id = "pool3">
+	<p>Pool 3</p>
+</div>
+
+
+</div>
+<button class = "btn" onclick = "compareAnswers4(boxes, allboxes1, '#demo_frame', '#exercise_form', '#score_right p', 'puzzles/enfant-terrible/game1');" >check</button>
+<button class = "btn" style = "float:right;" onclick = "resetGame('#demo_frame', 'puzzles/enfant-terrible/game1', '#score_right p', boxes);" >reset</button>
+
+
+</div>

@@ -1,0 +1,30 @@
+<p><%= @address['name'] %>,</p>
+
+<p>Here are your billing and upcoming appointment details with prepcloud</p>
+
+<table>
+  <th>Billing details</th>
+  <tr><td>Name</td><td><%= @address['name'] %></td></tr>
+  <tr><td>Company</td><td><%= @address['company'] %></td></tr>
+  <tr><td>Address 1</td><td><%= @address['address1'] %></td></tr>
+  <tr><td>Address 2</td><td><%= @address['address2'] %></td></tr>
+  <tr><td>City</td><td><%= @address['city'] %></td></tr>
+  <tr><td>State</td><td><%= @address['state'] %></td></tr>
+  <tr><td>Country</td><td><%= @address['country'] %></td></tr>
+  <tr><td>Zip</td><td><%= @address['zip'] %></td></tr>
+  <tr><td>Total</td><td>$70.00</td></tr>
+</table><br />
+
+<table>
+  <th>Upcoming appointments</th>
+  <tr><td><% unless @schedules[0].nil? %>Date: <%= @schedules[0].date %> | Hour: <%= @schedules[0].hour %> | Type: <%= @schedules[0].tutoring_type %><% end %></td></tr>                  
+  <tr><td><% unless @schedules[1].nil? %>Date: <%= @schedules[1].date %> | Hour: <%= @schedules[1].hour %> | Type: <%= @schedules[1].tutoring_type %><% end %></td></tr>                  
+  <tr><td><% unless @schedules[2].nil? %>Date: <%= @schedules[2].date %> | Hour: <%= @schedules[2].hour %> | Type: <%= @schedules[2].tutoring_type %><% end %></td></tr>                   
+  <tr><td><% unless @schedules[3].nil? %>Date: <%= @schedules[3].date %> | Hour: <%= @schedules[3].hour %> | Type: <%= @schedules[3].tutoring_type %><% end %></td></tr>                   
+  <tr><td><% unless @schedules[4].nil? %>Date: <%= @schedules[4].date %> | Hour: <%= @schedules[4].hour %> | Type: <%= @schedules[4].tutoring_type %><% end %></td></tr>  
+  <tr><td><% unless @schedules[5].nil? %>Date: <%= @schedules[5].date %> | Hour: <%= @schedules[5].hour %> | Type: <%= @schedules[5].tutoring_type %><% end %></td></tr>
+  <tr><td><% unless @schedules[6].nil? %>Date: <%= @schedules[6].date %> | Hour: <%= @schedules[6].hour %> | Type: <%= @schedules[6].tutoring_type %><% end %></td></tr> 
+  <tr><td><% unless @schedules[7].nil? %>Date: <%= @schedules[7].date %> | Hour: <%= @schedules[7].hour %> | Type: <%= @schedules[7].tutoring_type %><% end %></td></tr>
+</table>
+
+<%= image_tag attachments['prepcloud_email.png'].url -%>

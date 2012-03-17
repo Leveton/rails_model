@@ -1,0 +1,64 @@
+<%= devise_error_messages! %>
+<div class="row">
+<div class="span10">
+  <h2>Sign up</h2>
+
+  <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
+
+
+ <div><%= f.label :email %><br /><br />
+<%= f.email_field :email %></div>
+
+ <div><%= f.label :password %><br /><br />
+<%= f.password_field :password %></div>
+
+<div><%= f.label :password %><br /><br />
+<%= f.password_field :password_confirmation %></div><br />
+
+ <div class = "contact_us_submit"><%= f.submit "Sign up" %></div>
+<% end %>
+<div class ='fb_connect'><a><% facebooks = image_tag("fb-login-button.png", :alt => "login with facebook") %></a>
+	<%= link_to facebooks, user_omniauth_authorize_path(:facebook) %><br /><br /></div>
+<%= render :partial => "devise/shared/links" %>
+</div>
+ <div class="span4">
+
+                <div id="accordion">
+	            <h3><a>logic games in the browser</a></h3>
+	              <div>
+                    <ul>
+			       <li>learn basic logic</li>
+			       <li>play with friends*</li>
+                      <li>totally free</li>
+		          </ul>
+  	              </div>
+                 <h3><a>Instant stats</a></h3>
+                   <div>
+	                <ul>
+			       <li>time graphs</li>
+			       <li>accuracy graphs</li>
+                      <li>player comparisons</li>
+		          </ul>
+	              </div>
+	            <h3><a>Helps in preparing for...</a></h3>
+	              <div>
+		          <ul>
+			       <li>SAT logic section</li>
+                      <li>LSAT logic section</li>
+			       <li>Truth tables</li><br /><br />
+                      <li style = "font-size:.7em;">coming soon</li>
+		          </ul>
+	               </div>
+                 </div>
+                 </div>
+                </div>
+<script src="/javascripts/jquery/jquery.ui.widget.min.js"></script>
+	<script src="/javascripts/jquery/jquery.ui.accordion.min.js"></script>
+
+	<script>
+	$(function() {
+		$( "#accordion" ).accordion({
+			collapsible: true
+		});
+	});
+	</script>

@@ -1,0 +1,68 @@
+<script type="text/javascript" src="/javascripts/controllers/deus_ex_machina/hangman2.min.js"></script>
+<script>
+	$(function() {
+		$( "#progressbar" ).progressbar({
+			value: 50
+		});
+	});
+
+$(function(){
+  $('.hangman1, .hangman2, .hangman3, .hangman4, .hangman5, .hangman6, .hangman7, .hangman8').hide();
+});
+
+$(function() {
+    $( "#score_right" ).empty().css('background-color', 'pink').css('color', '#000000');
+		$('#score_right').append('PINK PROMPT').css('text-align', 'center');
+		$('#score_right').append("<p></p>");
+	});
+
+	$(function() {
+	$('.boxgrid.slideright p').empty();
+	$('.boxgrid.slideright p').html('Flip each answer choice and negate both sides.  If you negate a side that is negative, that side turns into a positive.');
+ });
+</script>
+
+<h1>Hangman</h1><br /><br />
+<p>Match the logic statement from the Pink Prompt to the logic notation at the right.  Your choices are pinned to the bottom and each wrong choice further dooms the man below.</p>
+
+<div class = "demo_frame_top" style ="display:table;height:335px;">
+<div class="hangman">
+    <div class="hangman1">
+    <img src="images/hangman1_second.png" alt="Bus"/>
+    </div>
+    <div class="hangman2" id ="hm1">
+    <img src="images/hangman1_first2.png" alt="Bus"/>
+    </div>
+    <div class="hangman3" id ="hm2">
+    <img src="images/hangman2.png" alt="Bus"/>
+    </div>
+    <div class="hangman4" id ="hm3">
+    <img src="images/hangman3.png" alt="Bus"/>
+    </div>
+    <div class="hangman5" id ="hm4">
+    <img src="images/hangman4.png" alt="Bus"/>
+    </div>
+    <div class="hangman6" id ="hm5">
+        <img src="images/hangman5.png" alt="Bus"/>
+    </div>
+    <div class="hangman7" id ="hm6">
+    <img src="images/hangman7.png" alt="Bus"/>
+    </div>
+    <div class="hangman8" id ="hm7">
+    <img src="images/hangman6.png" alt="Bus"/>
+    </div>
+</div>
+
+<div class = "hangman_choices" onmouseover="this.style.cursor='pointer'" style = "float:right;width:118px;margin-right:10px;">
+<div class = "hangman_button1"><button class = "hangman_buttons" id="hm9" onclick = "choiceChosen('',this, 'hm9', '.hangman_button1')"><del>Z_N</del></button></div>
+<div class = "hangman_button2"><button class = "hangman_buttons" id="hm10" onclick = "choiceChosen('',this, 'hm10', '.hangman_button2')">N -> <del>W</del></button></div>
+<div class = "hangman_button3"><button class = "hangman_buttons" id="hm11" onclick = "choiceChosen('',this, 'hm11', '.hangman_button3')"><del>H</del> -> Z + N</button></div>
+<div class = "hangman_button4"><button class = "hangman_buttons" id="hm12" onclick = "choiceChosen('',this, 'hm12', '.hangman_button4')">T_N -> P_W</button></div>
+<div class = "hangman_button5"><button class = "hangman_buttons" id="hm13" onclick = "choiceChosen('',this, 'hm13', '.hangman_button5')"><del>N_W</del> -> Z</button></div>
+<div class = "hangman_button6"><button class = "hangman_buttons" id="hm14" onclick = "choiceChosen('',this, 'hm14', '.hangman_button6')">Z -> W + <del>N</del></button></div>
+<div class = "hangman_button7"><button class = "hangman_buttons" id="hm15" onclick = "choiceChosen('',this, 'hm15', '.hangman_button7')">P + W -> <del>T_N</del></button></div>
+<div class = "hangman_button8"><button class = "hangman_buttons" id="hm16" onclick = "choiceChosen('',this, 'hm16', '.hangman_button8')">P_N -> <del>H_W</del></button></div>
+<div class = "hangman_button9"><button class = "hangman_buttons" id="hm17" onclick = "choiceChosen('',this, 'hm17', '.hangman_button9')"><del>H_Z</del>,P_W -> N</button></div>
+</div>
+<div class = "hangman_album"></div>
+</div>

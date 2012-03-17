@@ -1,0 +1,35 @@
+<script type="text/javascript" src="/javascripts/controllers/demo/game2.min.js"></script>
+
+
+<h1>Photo Game!</h1><br />
+  <p>Match the logical statements from the Pink Prompt to the correct notation below. Each picture you make is pinned to the bottom so that you have a record of what you've chosen.</p>
+
+
+
+<table class="sudoku" onmouseover="this.style.cursor='pointer'" style="width:510px;height:350px;margin-left:0px;">
+                <div class="sudoku_mid">
+                    <tr class="r0">
+
+                        <td type = "button" onclick="photoShoot(this, 'c1');" class="c1" style="background-color:#777777;font-size:2.5em;padding-top:50px;">F -> Y</td>
+                        <td type = "button" onclick="photoShoot(this, 'c2');" class="c2" style="background-color:#EEEEEE;font-size:2.5em;padding-top:50px;"><del>N</del> -> <del>P</del></td>
+                        <td type = "button" onclick="photoShoot(this, 'c3');" class="c3" style="background-color:#777777;font-size:2.5em;padding-top:50px;">R3 -> <del>N9</del></td>
+
+                     </tr>
+                    <tr class="r1">
+
+                        <td type = "button" onclick="photoShoot(this, 'c4');" class="c4" style="background-color:#EEEEEE;font-size:2.5em;padding-top:50px;"><del>Q_O</del> -> J</td>
+                        <td type = "button" onclick="photoShoot(this, 'c5');" class="c5" style="background-color:#777777;font-size:2.5em;padding-top:50px;"><del>I</del> -> <del>P_W</td>
+                        <td type = "button" onclick="photoShoot(this, 'c6');" class="c6" style="background-color:#EEEEEE;font-size:2.5em;padding-top:50px;"><del>Z_T</del> -> <del>G9</del></td>
+
+                   </tr>
+
+                </div>
+
+            </table>
+
+
+
+<div class="photoShoot_bottom" style="width:510px;"><div class = "album" style="width:510px;"></div></div>
+
+</div>
+</div>

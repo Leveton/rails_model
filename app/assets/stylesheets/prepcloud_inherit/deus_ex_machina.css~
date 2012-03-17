@@ -1,0 +1,348 @@
+
+.piano_keys tr {
+  border:1px solid #ccc;
+}
+
+.piano_keys td {
+  border:1px solid #ccc;
+  width:11%;
+  text-align:center;
+  background:transparent;
+  padding-top:0;
+}
+
+.piano_keys .r3 td,.sudoku .r6 td {
+  border-top:2px solid #000;
+}
+
+.piano_keys input {
+  width:100%;
+  text-align:center;
+  font-size:2em;
+  border:0 none;
+  background: #27461F;
+
+}
+.piano_keys input:focus {
+color:#000;
+}
+
+.piano_keys input.disabled {
+color:#555;
+font-weight:700;
+}
+
+.piano_keys.col0 .x1, .x2, .x3, .x4, .x5, .x6, .x7, .x8, .c0 input,.sudoku.col1 .c1 input,.sudoku.col2 .c2 input,.sudoku.col3 .c3 input,.sudoku.col4 .c4 input,.sudoku.col5 .c5 input,.sudoku.col6 .c6 input,.sudoku.col7 .c7 input,.sudoku.col8 .c8 input {
+background:#000000;
+}
+
+.piano_keys.row0 .r0,.sudoku.row1 .r1,.sudoku.row2 .r2,.sudoku.row3 .r3,.sudoku.row4 .r4,.sudoku.row5 .r5,.sudoku.row6 .r6,.sudoku.row7 .r7,.sudoku.row8 .r8 {
+background:#27461F;
+}
+
+.piano_keys.box00 .x1, .x2, .x3, .x4, .x5, .x6, .x7, .x8, .s0 .c0,.sudoku.box00 .s0 .c1,.sudoku.box00 .s0 .c2,.sudoku.box01 .s0 .c3,.sudoku.box01 .s0 .c4,.sudoku.box01 .s0 .c5,.sudoku.box02 .s0 .c6,.sudoku.box02 .s0 .c7,.sudoku.box02 .s0 .c8,.sudoku.box10 .s1 .c0,.sudoku.box10 .s1 .c1,.sudoku.box10 .s1 .c2,.sudoku.box11 .s1 .c3,.sudoku.box11 .s1 .c4,.sudoku.box11 .s1 .c5,.sudoku.box12 .s1 .c6,.sudoku.box12 .s1 .c7,.sudoku.box12 .s1 .c8,.sudoku.box20 .s2 .c0,.sudoku.box20 .s2 .c1,.sudoku.box20 .s2 .c2,.sudoku.box21 .s2 .c3,.sudoku.box21 .s2 .c4,.sudoku.box21 .s2 .c5,.sudoku.box22 .s2 .c6,.sudoku.box22 .s2 .c7,.sudoku.box22 .s2 .c8 {
+background:#27461F;
+}
+td.x1, td.x2, td.x3, td.x4, td.x5, td.x6, td.x7, td.x8{
+width: 65px!important;
+}
+.piano_keys input.colconflict,.sudoku input.rowconflict,.sudoku input.boxconflict {
+color:red;
+}
+.piano_keys input{
+  width: 57px;
+  height: 80px;
+  }
+.black_key{
+  height: 120px;
+  width: 40px;
+  margin-right: 12px;
+  margin-left: 12px;
+  background-color: #000;
+  }
+#answer_form{
+  width: 105px;
+  height: 125px;
+  float: right;
+  text-align: center;
+  margin:15px;
+  }
+#key1,#key2,#key3,#key4,#key5,#key6{
+  width: 105px;
+  height: 40px;
+}
+.piano_keys {
+  border:2px solid #000;
+  width:25em;
+  text-align:center;
+  margin:0 auto;
+  width: 300px;
+  height: 240px;
+  float: left;
+  margin: 10px;
+}
+.photoShoot_bottom{
+  height:200px;
+  width:500px;
+  background:#0E2A21;
+  margin-top:20px;
+  overflow:scroll;
+  }
+.hangman{
+  height: 300px;
+  width: 300px;
+  background: #F5F5F5;
+  display: table;
+  border-left: 8px solid #733D1A;
+  border-top: 8px solid #733D1A;
+  float: left;
+  margin-left: 10px;
+  }
+.hangman2{
+  height: 57px;
+  width: 300px;
+  background: #F5F5F5;
+
+  }
+.hangman3{
+  height: 40px;
+  width: 300px;
+  background: #F5F5F5;
+  clear:both;
+  }
+.hangman4, .hangman7{
+  height: 65px;
+  width: 150px;
+  background: #F5F5F5;
+  display:table;
+  float: left;
+ }
+.hangman5, .hangman8{
+  height: 65px;
+  width: 150px;
+  background: #F5F5F5;
+  float: right;
+  }
+.hangman6{
+  height: 65px;
+  width: 300px;
+  background: #F5F5F5;
+  clear:both;
+}
+.hangman_button1, .hangman_button2, .hangman_button3, .hangman_button4, .hangman_button5, .hangman_button6, .hangman_button7, .hangman_button8, .hangman_button9{
+  width: 119px;
+  height: 44px;
+  margin-top:2px;
+  }
+.hangman_buttons{
+  width: 125px!important;
+  height: 43px;
+  font-size: 1.3em;
+  background-color: #777777;
+  color: #000000;
+  border: 1px solid #000;
+  margin: 2px!important;
+  }
+.hangman_album{
+  width: 320px;
+  height: 120px;
+  float: left;
+  background-color:#0E2A21;
+  margin: 10px;
+  overflow:scroll;
+  }
+
+textarea {
+  float: left;
+  background: #f8f8f8;
+  border: 1px solid #d6d6d6;
+  border-left-color: #e4e4e4;
+  border-top-color: #e4e4e4;
+  padding: 0.3em;
+  margin: 5px;
+
+}
+#log, #log2, #log3, #log4, #log5, #log6, #log7{
+  float: right;
+  margin-left: 10px;
+  width: 170px;
+  height: 29px;
+  border: 1px solid #d6d6d6;
+  border-color: #e4e4e4;
+  font-size: 25px;
+  font-weight: bold;
+  text-align: center;
+}
+#fade_text{
+  background-color: #C6E2FF;
+  }
+#fade_text2, #fade_text3, #fade_text4, #fade_text5, #fade_text6, #fade_text7{
+  opacity: 0;
+  background-color: #C6E2FF;
+  }
+.shot{
+	border:3px solid #FCFCFC;
+	float:right;
+	position:relative;
+	margin-left:10px;
+	margin-top:5px;
+	overflow:hidden;
+	background: #C6E2FF;
+
+}
+.shot img{
+	display:block;
+}
+.album{
+  bottom:50px;
+	position:absolute;
+	width:960px;
+}
+.album .slide{
+	width:960px;
+	height:150px;
+	overflow:auto;
+	position:relative;
+}
+td.c2, td.c4, td.c6, td.c8{
+  background: #EEEEEE;
+  }
+
+/*
+ * jQuery UI CSS Framework 1.8.16
+ *
+ * Copyright 2011, AUTHORS.txt (http://jqueryui.com/about)
+ * Dual licensed under the MIT or GPL Version 2 licenses.
+ * http://jquery.org/license
+ *
+ * http://docs.jquery.com/UI/Theming/API
+ */
+
+/* Layout helpers
+----------------------------------*/
+.ui-helper-hidden { display: none; }
+.ui-helper-hidden-accessible { position: absolute !important; clip: rect(1px 1px 1px 1px); clip: rect(1px,1px,1px,1px); }
+.ui-helper-reset { margin: 0; padding: 0; border: 0; outline: 0; line-height: 1.3; text-decoration: none; font-size: 100%; list-style: none; }
+.ui-helper-clearfix:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; }
+.ui-helper-clearfix { display: inline-block; }
+/* required comment for clearfix to work in Opera \*/
+* html .ui-helper-clearfix { height:1%; }
+.ui-helper-clearfix { display:block; }
+/* end clearfix */
+.ui-helper-zfix { width: 100%; height: 100%; top: 0; left: 0; position: absolute; opacity: 0; filter:Alpha(Opacity=0); }
+
+
+/* Interaction Cues
+----------------------------------*/
+.ui-state-disabled { cursor: default !important; }
+
+
+/* Icons
+----------------------------------*/
+
+/* states and images */
+.ui-icon { display: block; text-indent: -99999px; overflow: hidden; background-repeat: no-repeat; }
+
+
+/* Misc visuals
+----------------------------------*/
+
+/* Overlays */
+.ui-widget-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+
+
+/*
+ * jQuery UI CSS Framework 1.8.16
+ *
+ * Copyright 2011, AUTHORS.txt (http://jqueryui.com/about)
+ * Dual licensed under the MIT or GPL Version 2 licenses.
+ * http://jquery.org/license
+ *
+ * http://docs.jquery.com/UI/Theming/API
+ *
+ * To view and modify this theme, visit http://jqueryui.com/themeroller/?ffDefault=Verdana,Arial,sans-serif&fwDefault=normal&fsDefault=1.1em&cornerRadius=0px&bgColorHeader=0c1e1d&bgTextureHeader=03_highlight_soft.png&bgImgOpacityHeader=40&borderColorHeader=aaaaaa&fcHeader=ffffff&iconColorHeader=ffffff&bgColorContent=0e2a21&bgTextureContent=01_flat.png&bgImgOpacityContent=75&borderColorContent=aaaaaa&fcContent=ffffff&iconColorContent=222222&bgColorDefault=e6e6e6&bgTextureDefault=02_glass.png&bgImgOpacityDefault=75&borderColorDefault=d3d3d3&fcDefault=555555&iconColorDefault=888888&bgColorHover=dadada&bgTextureHover=02_glass.png&bgImgOpacityHover=75&borderColorHover=999999&fcHover=212121&iconColorHover=454545&bgColorActive=ffffff&bgTextureActive=02_glass.png&bgImgOpacityActive=65&borderColorActive=aaaaaa&fcActive=212121&iconColorActive=454545&bgColorHighlight=fbf9ee&bgTextureHighlight=02_glass.png&bgImgOpacityHighlight=55&borderColorHighlight=fcefa1&fcHighlight=363636&iconColorHighlight=2e83ff&bgColorError=fef1ec&bgTextureError=05_inset_soft.png&bgImgOpacityError=95&borderColorError=cd0a0a&fcError=cd0a0a&iconColorError=cd0a0a&bgColorOverlay=aaaaaa&bgTextureOverlay=01_flat.png&bgImgOpacityOverlay=0&opacityOverlay=30&bgColorShadow=aaaaaa&bgTextureShadow=01_flat.png&bgImgOpacityShadow=0&opacityShadow=30&thicknessShadow=8px&offsetTopShadow=-8px&offsetLeftShadow=-8px&cornerRadiusShadow=8px
+ */
+
+
+/* Component containers
+----------------------------------*/
+.ui-widget { font-family: Verdana,Arial,sans-serif; font-size: 1.1em; }
+.ui-widget .ui-widget { font-size: 1em; }
+.ui-widget input, .ui-widget select, .ui-widget textarea, .ui-widget button { font-family: Verdana,Arial,sans-serif; font-size: 1em; }
+.ui-widget-content { border: 1px solid #aaaaaa; background: #0e2a21 url(images/ui-bg_flat_75_0e2a21_40x100.png) 50% 50% repeat-x; color: #ffffff; }
+.ui-widget-content a { color: #ffffff; }
+.ui-widget-header { border: 1px solid #aaaaaa; background: #0c1e1d url(images/ui-bg_highlight-soft_40_0c1e1d_1x100.png) 50% 50% repeat-x; color: #ffffff; font-weight: bold; }
+.ui-widget-header a { color: #ffffff; }
+
+/* Interaction states
+----------------------------------*/
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default { border: 1px solid #d3d3d3; background: #e6e6e6 url(images/ui-bg_glass_75_e6e6e6_1x400.png) 50% 50% repeat-x; font-weight: normal; color: #555555; }
+.ui-state-default a, .ui-state-default a:link, .ui-state-default a:visited { color: #555555; text-decoration: none; }
+.ui-state-hover, .ui-widget-content .ui-state-hover, .ui-widget-header .ui-state-hover, .ui-state-focus, .ui-widget-content .ui-state-focus, .ui-widget-header .ui-state-focus { border: 1px solid #999999; background: #dadada url(images/ui-bg_glass_75_dadada_1x400.png) 50% 50% repeat-x; font-weight: normal; color: #212121; }
+.ui-state-hover a, .ui-state-hover a:hover { color: #212121; text-decoration: none; }
+.ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active { border: 1px solid #aaaaaa; background: #ffffff url(images/ui-bg_glass_65_ffffff_1x400.png) 50% 50% repeat-x; font-weight: normal; color: #212121; }
+.ui-state-active a, .ui-state-active a:link, .ui-state-active a:visited { color: #212121; text-decoration: none; }
+.ui-widget :active { outline: none; }
+
+/* Interaction Cues
+----------------------------------*/
+.ui-state-highlight, .ui-widget-content .ui-state-highlight, .ui-widget-header .ui-state-highlight  {border: 1px solid #fcefa1; background: #fbf9ee url(images/ui-bg_glass_55_fbf9ee_1x400.png) 50% 50% repeat-x; color: #363636; }
+.ui-state-highlight a, .ui-widget-content .ui-state-highlight a,.ui-widget-header .ui-state-highlight a { color: #363636; }
+.ui-state-error, .ui-widget-content .ui-state-error, .ui-widget-header .ui-state-error {border: 1px solid #cd0a0a; background: #fef1ec url(images/ui-bg_inset-soft_95_fef1ec_1x100.png) 50% bottom repeat-x; color: #cd0a0a; }
+.ui-state-error a, .ui-widget-content .ui-state-error a, .ui-widget-header .ui-state-error a { color: #cd0a0a; }
+.ui-state-error-text, .ui-widget-content .ui-state-error-text, .ui-widget-header .ui-state-error-text { color: #cd0a0a; }
+.ui-priority-primary, .ui-widget-content .ui-priority-primary, .ui-widget-header .ui-priority-primary { font-weight: bold; }
+.ui-priority-secondary, .ui-widget-content .ui-priority-secondary,  .ui-widget-header .ui-priority-secondary { opacity: .7; filter:Alpha(Opacity=70); font-weight: normal; }
+.ui-state-disabled, .ui-widget-content .ui-state-disabled, .ui-widget-header .ui-state-disabled { opacity: .35; filter:Alpha(Opacity=35); background-image: none; }
+
+/* Icons
+----------------------------------*/
+
+/* states and images */
+.ui-icon { width: 16px; height: 16px; background-image: url(images/ui-icons_222222_256x240.png); }
+.ui-widget-content .ui-icon {background-image: url(images/ui-icons_222222_256x240.png); }
+.ui-widget-header .ui-icon {background-image: url(images/ui-icons_ffffff_256x240.png); }
+.ui-state-default .ui-icon { background-image: url(images/ui-icons_888888_256x240.png); }
+.ui-state-hover .ui-icon, .ui-state-focus .ui-icon {background-image: url(images/ui-icons_454545_256x240.png); }
+.ui-state-active .ui-icon {background-image: url(images/ui-icons_454545_256x240.png); }
+.ui-state-highlight .ui-icon {background-image: url(images/ui-icons_2e83ff_256x240.png); }
+.ui-state-error .ui-icon, .ui-state-error-text .ui-icon {background-image: url(images/ui-icons_cd0a0a_256x240.png); }
+
+
+
+
+/* Misc visuals
+----------------------------------*/
+
+/* Corner radius */
+.ui-corner-all, .ui-corner-top, .ui-corner-left, .ui-corner-tl { -moz-border-radius-topleft: 0px; -webkit-border-top-left-radius: 0px; -khtml-border-top-left-radius: 0px; border-top-left-radius: 0px; }
+.ui-corner-all, .ui-corner-top, .ui-corner-right, .ui-corner-tr { -moz-border-radius-topright: 0px; -webkit-border-top-right-radius: 0px; -khtml-border-top-right-radius: 0px; border-top-right-radius: 0px; }
+.ui-corner-all, .ui-corner-bottom, .ui-corner-left, .ui-corner-bl { -moz-border-radius-bottomleft: 0px; -webkit-border-bottom-left-radius: 0px; -khtml-border-bottom-left-radius: 0px; border-bottom-left-radius: 0px; }
+.ui-corner-all, .ui-corner-bottom, .ui-corner-right, .ui-corner-br { -moz-border-radius-bottomright: 0px; -webkit-border-bottom-right-radius: 0px; -khtml-border-bottom-right-radius: 0px; border-bottom-right-radius: 0px; }
+
+/* Overlays */
+.ui-widget-overlay { background: #aaaaaa url(images/ui-bg_flat_0_aaaaaa_40x100.png) 50% 50% repeat-x; opacity: .70;filter:Alpha(Opacity=70); }
+.ui-widget-shadow { margin: -8px 0 0 -8px; padding: 8px; background: #aaaaaa url(images/ui-bg_flat_0_aaaaaa_40x100.png) 50% 50% repeat-x; opacity: .50;filter:Alpha(Opacity=50); -moz-border-radius: 8px; -khtml-border-radius: 8px; -webkit-border-radius: 8px; border-radius: 8px; }/*
+ * jQuery UI Dialog 1.8.16
+ *
+ * Copyright 2011, AUTHORS.txt (http://jqueryui.com/about)
+ * Dual licensed under the MIT or GPL Version 2 licenses.
+ * http://jquery.org/license
+ *
+ * http://docs.jquery.com/UI/Dialog#theming
+ */
+.ui-dialog { position: absolute; padding: .2em; width: 300px; overflow: hidden; }
+.ui-dialog .ui-dialog-titlebar { padding: .4em 1em; position: relative;  }
+.ui-dialog .ui-dialog-title { float: left; margin: .1em 16px .1em 0; }
+.ui-dialog .ui-dialog-titlebar-close { position: absolute; right: .3em; top: 50%; width: 19px; margin: -10px 0 0 0; padding: 1px; height: 18px; }
+.ui-dialog .ui-dialog-titlebar-close span { display: block; margin: 1px; }
+.ui-dialog .ui-dialog-titlebar-close:hover, .ui-dialog .ui-dialog-titlebar-close:focus { padding: 0; }
+.ui-dialog .ui-dialog-content { position: relative; border: 0; padding: .5em 1em; background: none; overflow: auto; zoom: 1; }
+.ui-dialog .ui-dialog-buttonpane { text-align: left; border-width: 1px 0 0 0; background-image: none; margin: .5em 0 0 0; padding: .3em 1em .5em .4em; }
+.ui-dialog .ui-dialog-buttonpane .ui-dialog-buttonset { float: right; }
+.ui-dialog .ui-dialog-buttonpane button { margin: .5em .4em .5em 0; cursor: pointer; }
+.ui-dialog .ui-resizable-se { width: 14px; height: 14px; right: 3px; bottom: 3px; }
+.ui-draggable .ui-dialog-titlebar { cursor: move; }
+
+.ui-progressbar { height:2em; text-align: left; }
+.ui-progressbar .ui-progressbar-value {margin: -1px; height:100%; }

@@ -1,0 +1,88 @@
+<div class="middle">
+
+<div id = "demo_frame">
+<h1>put the blocks in their correct space based on these rules:</h1>
+
+<div class = "demo_frame_top">
+<p>1) M is in the less crowded space<br />
+
+2) N and K must be in the same space<br />
+
+3) If a space does not contain L, then that space contains J<br />
+
+4) M is in Space 1<br />
+
+5) K and J cannot be together<br /></p>
+<div class="draggable" id = "J">
+	<p>J</p>
+</div>
+<div class="draggable" id = "K">
+	<p>K</p>
+</div>
+<div class="draggable" id = "L">
+	<p>L</p>
+</div>
+<div class="draggable" id = "M">
+	<p>M</p>
+</div>
+<div class="draggable" id = "N">
+	<p>N</p>
+</div><br />
+</div>
+
+<div class = "demo_frame_bottom">
+<div class="droppable2" style = "background-color:#102C31" id = "1">
+	<p>Space 1</p>
+</div>
+<div class="droppable2" style = "background-color:#102C31" id = "2">
+	<p>Space 2</p>
+</div>
+
+
+</div>
+<button class = "resetGame" style = "float:left;margin:10px;" onclick="compareAnswers(boxes, allboxes2, '#demo_frame', 'puzzles/demo/game1');">check</button>
+<button class = "resetGame" style = "float:left;margin:10px;" onclick = "resetGame('#demo_frame', 'puzzles/demo/game0', '#score_right p', boxes);" >reset</button>
+<div class = "footnote">These are not actual LSAT questions.  <a href="/practice">Go here</a> for real questions.</div>
+</div>
+
+<div id = "exercise_form" class = "hidden" >
+<div class = "exercise_form_title1">That's correct!</div>
+<div class = "exercise_form_title2" style="background:#88ff77;">Below is your time per puzzle</div>
+<div class = "exercise_form_title3" style="background:#66ff88;">Remember, the LSAT's all about the speed..*</div>
+
+<div class = 'user_chart' style="margin-top:15px;">
+<h3>average user's time per puzzle (in seconds)</h3>
+<div class = 'user_barchart'><div class = 'user_y_axis'></div></div>
+</div><br />
+
+<div class = 'user_chart'>
+<h3>Your average time per puzzle (in seconds)</h3>
+<div class = 'prepcloud_barchart'><div class = 'prepcloud_y_axis'></div></div>
+</div>
+
+<h2><%= link_to "Sign up", new_user_registration_path %> for free to save your result and play the other puzzles</h2><br /><br />
+
+</div>
+
+<div id = "timesUp_form" class = "hidden" >
+<h1>Time's Up!</h1>
+<h2>Would you like to repeat the puzzle or exit?</h2><br /><br />
+<p>Try as many times as it takes you to get it right</p><br />
+
+<div class = "action_plain"><a><%= link_to "repeat", game0_path %></a></div>
+<div class = "exit_game"><a><%= link_to "exit", root_path %></a></div>
+</div>
+
+</div>
+<div id="dialog-message" title="For this puzzle">
+<p>This three-game puzzle demonstrates our logic games.  If you feel they are helpful, or just enjoy them, then sign up to play the rest.<br /><br />  Refer to your right-hand game panel for your puzzle progress, your time limit, and the answers you've chosen.</p>
+</div>
+
+<script src="https://www.google.com/jsapi?key=ABQIAAAA5TxFSmgopWCajQNyTIoT8hStcRCLXCr0vyCftWOM2tQQST_-5hSVq0YI4pspGoXIGxDHdbH4onBpWw" type="text/javascript"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script language="Javascript" type="text/javascript">google.load("jqueryui", "1.8.16");</script>
+<script type="text/javascript" src="/javascripts/widgetDialogPositionProgressbar.min.js"></script>
+<script type="text/javascript" src="/javascripts/draggableDroppable.min.js"></script>
+<script type="text/javascript" src="/javascripts/jquery.ui.mouse.min.js"></script>
+<script type="text/javascript" src="/javascripts/puzzles/demo/game0.min.js"></script>
+<script type="text/javascript" src="/javascripts/d3/javascripts/d3.min.js"></script>

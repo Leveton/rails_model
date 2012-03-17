@@ -1,0 +1,100 @@
+<script>
+$(function() {
+		$( ".draggable" ).draggable({
+
+		  start: function( event, ui ) {
+		    $( this )
+		       littlebox = $( this ).attr('id');
+		       }
+		        });
+		$( ".c10" ).droppable({
+			drop: function( event, ui ) {
+				$( this )
+				  .css("background-color", "#ffffff")
+				  bigbox = $( this ).attr('id')
+
+				  if (arrayLength(boxes) == true){
+				    $('#score_right').append("<p>" + (littlebox) + "-" + (bigbox) + "</p>");
+			      boxes.push((littlebox) + (bigbox));
+			      }
+			    boxColors2(littlebox)
+				  }
+		});
+	});
+</script>
+
+<h1>Boss level!  Put the blocks in their correct cell.</h1><br />
+
+
+<p>1) K cannot be in the second row or the first column<br />
+
+2) If N shares a column with M, it shares a column with L<br />
+
+3) J shares a row with K but not a column with M<br />
+
+4) The middle row has one block exactly<br />
+
+5) L is in a higher row than N<br /></p>
+
+        <div id="sudoku_content">
+
+            <table class="sudoku" cellpadding="0" cellspacing="0">
+                <div class="sudoku_mid">
+                    <tr class="r0">
+
+                        <td class="b10"><input type="text"  value=""  ></td>
+                        <td class="b10"><input type="text"  value="C1"  ></td>
+                        <td class="b10"><input type="text"  value="C2"  ></td>
+
+                    </tr>
+                    <tr class="r0">
+
+                        <td class="b10"><input type="text"  value="R1"  ></td>
+                        <td class="c10" id = "R1, C1"></td>
+                        <td class="c10" id = "R1, C2"></td>
+
+                    </tr>
+                    <tr class="r1">
+
+                        <td class="b10"><input type="text"  value="R2"  ></td>
+                        <td class="c10" id = "R2, C1"></td>
+                        <td class="c10" id = "R2, C2"></td>
+
+
+                    </tr>
+                    <tr class="r2">
+
+                        <td class="b10"><input type="text"  value="R3"  ></td>
+                        <td class="c10" id = "R3, C1"></td>
+                        <td class="c10" id = "R3, C2"></td>
+
+
+                    </tr>
+                </div>
+
+            </table>
+
+        </div>
+
+ <div class = "demo_frame_bottom2">
+<div class="draggable" id = "J">
+  <p>J</p>
+</div>
+<div class="draggable" id = "K">
+  <p>K</p>
+</div>
+<div class="draggable" id = "L">
+	<p>L</p>
+</div>
+<div class="draggable" id = "M">
+	<p>M</p>
+</div>
+<div class="draggable" id = "N">
+	<p>N</p>
+</div>
+</div>
+<div style="clear:both;">
+<button class = "btn" onclick="compareAnswers(boxes, allboxes4, '#demo_frame', 'puzzles/quarterback/game5', '#score_right p');">check</button>
+<button class = "btn" onclick = "resetGame('#demo_frame', 'puzzles/quarterback/game5', '#score_right p', boxes);" >reset</button>
+</div>
+</div>

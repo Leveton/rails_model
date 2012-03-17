@@ -1,0 +1,35 @@
+<Course>
+  <CompanyName value="Logical Reasoning"/>
+  <DepartmentName value="medium"/>
+  <CourseName value="preptest61 medium quiz"/>
+  <LearnerName value="Ridley"/>
+  <LearnerID value="micahfsu@gmail.com"/>
+  <LessonName value="PrepTest61_medium_quiz"/>
+  <QuizAttempts value="1"/>
+  <TotalQuestions value="10"/>
+  <Result>
+    <CoreData>
+      <Status value="completed"/>
+      <Location value="10"/>
+      <RawScore value="0"/>
+      <MaxScore value="10"/>
+      <MinScore value="0"/>
+      <SessionTime value="00:00:10"/>
+    </CoreData>
+    <InteractionData>
+      <Interactions>
+        <Date value="02/24/2012"/>
+        <InteractionTime value="10:59:57"/>
+        <InteractionID value="1"/>
+        <ObjectiveID value="Quiz10111"/>
+        <InteractionType value="choice"/>
+        <CorrectResponse value="D"/>
+        <StudentResponse value="C"/>
+        <Result value="W"/>
+        <Weight value="1"/>
+        <Latency value="00:00:05"/>
+        <Attempt value="1"/>
+      </Interactions>
+    </InteractionData>
+  </Result>
+</Course>

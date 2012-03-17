@@ -1,0 +1,34 @@
+<script type="text/javascript" src="javascripts/controllers/enfant_terrible/game4.js"></script>
+<style>
+	#sortable { list-style-type: none; margin: 0; padding: 0; }
+	#sortable li { margin: 3px 3px 3px 0; padding: 1px; float: left; width: 100px; height: 90px; font-size: 4em; text-align: center; }
+</style>
+
+<h1>Put the blocks into the correct combination based on these rules</h1><br /><br />
+
+<p>
+1) if orange is in the corner, then yellow is in the corner<br />
+2) green is in the top middle slot<br />
+3) black and red don't touch and are on separate rows<br />
+4) red is diagonal of green<br />
+5) green is to the right of orange<br />
+</p>
+
+<ul id="sortable" style="margin:10px;">
+	<li class="droppable2" style="background-color:red;width:150px;height:150px;" id="foo_1"></li>
+	<li class="droppable2" style="background-color:black;width:150px;height:150px;" id="foo_2"></li>
+	<li class="droppable2" style="background-color:pink;width:150px;height:150px;" id="foo_3"></li>
+	<li class="droppable2" style="background-color:green;width:150px;height:150px;" id="foo_4"></li>
+	<li class="droppable2" style="background-color:orange;width:150px;height:150px;" id="foo_5"></li>
+	<li class="droppable2" style="background-color:yellow;width:150px;height:150px;" id="foo_6"></li>
+</ul>
+
+</div>
+<div style="clear:both;">
+<button class = "btn" onclick = "compareAnswers3(boxes4, allboxes4, '#demo_frame', 'puzzles/enfant-terrible/game1', '#score_right p', 'puzzles/enfant-terrible/game4');" >check</button>
+<button class = "btn" style = "float:right;" onclick = "resetGame('#demo_frame', 'puzzles/enfant-terrible/game4');" >reset</button>
+
+
+
+</div>
+</div>

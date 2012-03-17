@@ -1,0 +1,52 @@
+<div class="middle">
+
+<%= render 'devise/shared/left_column' %>
+
+             
+<div class="con_cen2">
+                      
+<div class="easymedhard">  
+  
+<div class="FAQ1">
+<h1>Why do I have to create an account?</h1><br /><br />
+<p>We use real LSAT questions with permission from the Law School Admission Council.  One licensing requirement stipulates that all users register before being given access to LSAC content.  This also makes it possible to keep track of your results, benefiting you by allowing you to gage progress over time.</p> 
+<div class="easymedhard_space">
+</div>  
+</div>  
+
+<div class="FAQ2">
+<h1>Why can't I pause a quiz? Why the time limit?</h1><br /><br />
+<p>The most difficult aspect of the LSAT for many students is the short time limit.  Not training under live conditions has been shown to not only be useless, but perhaps detrimental.</p><br />                  
+<div class="easymedhard_space">
+</div>
+</div>           
+                      
+<div class="FAQ3">
+<h1>Why do quizzes cost a dollar?</h1><br /><br />
+<p>To cover licensing and site-maintenance fees.</p><br />                  
+<div class="easymedhard_space">
+</div>
+</div>
+                      
+<div class="FAQ4">
+<h1>Can I review my results?</h1><br /><br />
+<p>Yes - there are two ways.  1) click the "review quiz" button on the last page of your quiz.  2) click the "Account" tab (top right of any page) and then click "Assessments", followed by the assessment you would like to review.</p>                     
+<div class="easymedhard_space">
+</div>
+                      
+
+                      
+</div>                      
+</div>
+</div>
+
+              
+<% if user_signed_in? %>
+<%= render 'devise/shared/score_feed' %>
+<% else %>
+<%= render 'devise/shared/right_column' %>
+<% end %>
+              
+   
+              
+  </div>

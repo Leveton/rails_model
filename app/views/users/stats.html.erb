@@ -1,0 +1,25 @@
+<div class="row">
+      <div class="span12">
+        <h2>Which stats do you want to see?</h2><br />
+        <ul class="media-grid">
+
+       <li>
+          <a href="/assessments/<%= current_user.id %>" style="background:#F5F5F5;">
+            <%= image_tag("real_lsat_stats.png")%>
+          </a>
+        </li>
+
+        <li>
+          <a href="/users/<%= current_user.id %>" style="background:#F5F5F5;">
+            <%= image_tag("my_account.png")%>
+          </a>
+        </li>
+        <li>
+          <a href="/puzzles/<%= current_user.id %>" style="background:#F5F5F5;">
+            <%= image_tag("real_lsat_stats2.png")%>
+          </a>
+        </li>
+
+   </ul>
+</div>
+</div>

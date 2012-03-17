@@ -1,0 +1,65 @@
+<div id="permanent_success">Your scheduled appointments</div><br />
+
+
+<table>
+
+
+	<tr>
+		<td>
+		<div class="date_taken">
+		Date(s)
+		<br /><br />
+		
+    <% @appointments_date.each do |t| %>
+      <%= t %><br />
+      <% end %>
+		</td>
+		</div>
+
+		<td>
+		<div class="date_taken">
+		Hour
+		<br /><br />
+		
+    <% @appointments_hour.each do |t| %>
+      <%= t %><br />
+      <% end %>
+    </td>
+		</div>
+
+		<td>
+		<div class="difficulty_level">
+		Location
+		<br /><br />
+    <% @appointments_location.each do |t| %>
+      <%= t %><br />
+      <% end %>
+		</td>
+		</div>
+
+		<td>
+		<div class="quiz_type">
+		Phone Number
+		<br /><br />
+		<% @appointments_phone.each do |t| %>
+      <%= t %><br />
+      <% end %>
+		</td>
+		</div>
+
+		<td>
+		<div class="correct">
+		Type
+		<br /><br />
+    <% @appointments_type.each do |t| %>
+      <%= t %><br />
+      <% end %>
+		</td>
+		</div>
+
+		
+
+
+	</tr>
+
+</table>

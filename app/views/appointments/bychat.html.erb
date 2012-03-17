@@ -1,0 +1,65 @@
+<link rel="stylesheet" href="/stylesheets/calendar.css">
+
+    <div class="middle">
+
+        <div class="demo" align="center">
+        <div id="partial"></div>
+            <div id="datepicker"></div>
+
+            <div id='calendar'></div>
+
+                <div id='schedule_form'>
+                <%= form_for(@schedules) do |f| %>
+
+
+<div id="form" style="display:none;">
+
+  <div class="schedule_verify">
+
+  <div class="schedule_verify2">
+    <p>Please ensure that the date and hour are correct.  Upon hitting confirm, you will be redirected to Paypal.</p><br />
+
+    date<br />
+    <input id="schedules_date" name="schedules[date]"  type="text" />
+    <label for="schedules_date">date</label> <br /><br /><br /><br />
+    hour<br />
+    <input id="schedules_hour" name="schedules[hour]"  type="text" />
+    <label for="schedules_hour">hour</label><br /><br /><br /><br />
+
+    Confirm how you would like to receive help<br />
+
+    <input type="radio" name="schedules[tutoring_type]" value="by chat" checked> through our chat client<br />
+    phone number is required<br />
+    <input id="phone_number" name="schedules[phone_number]"  type="text" /><br /><br /><br /><br />
+
+    <hr>
+
+    <input type="hidden" name="pageNo" id="pageNo" value="1">
+
+    <div class="actions">
+    <input type="submit" name="btn" value="Submit" id="subData" style="display:none;">
+    </div>
+
+
+
+</div>
+</div>
+</div>
+    <% end %>
+                </div>
+                <div id="nextPrev">
+
+                                <input type="button" value="<<back" id="back" onClick="prevPage()">
+
+                                <input type="hidden" value="" id="middle" >
+
+                                <input type="button" value="next>>" id="next" onClick="return nextPage()">
+
+                </div>
+
+                </div>
+
+              </div>
+
+<script type="text/javascript" src="/../javascripts/calendar/standard.js"></script>
+<script type="text/javascript" src="/../javascripts/calendar/calendar.js.erb"></script>

@@ -1,0 +1,11 @@
+<div class="middle">
+              <%= render 'devise/shared/left_column' %>
+
+              <%= render 'devise/shared/chat_cen' %>
+              <% if user_signed_in? %>
+              <%= render 'devise/shared/score_feed' %>
+              <% else %>
+              <%= render 'devise/shared/right_column' %>
+              <% end %>
+              
+</div>     

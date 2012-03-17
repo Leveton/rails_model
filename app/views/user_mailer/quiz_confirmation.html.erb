@@ -1,0 +1,17 @@
+<p><%= @address['name'] %>,</p>
+
+<p>Here are the details of your purchase from prepcloud</p>
+
+<table>
+  <tr><td>Name</td><td><%= @address['name'] %></td></tr>
+  <tr><td>Company</td><td><%= @address['company'] %></td></tr>
+  <tr><td>Address 1</td><td><%= @address['address1'] %></td></tr>
+  <tr><td>Address 2</td><td><%= @address['address2'] %></td></tr>
+  <tr><td>City</td><td><%= @address['city'] %></td></tr>
+  <tr><td>State</td><td><%= @address['state'] %></td></tr>
+  <tr><td>Country</td><td><%= @address['country'] %></td></tr>
+  <tr><td>Zip</td><td><%= @address['zip'] %></td></tr>
+  <tr><td>Total</td><td>$1.00</td></tr>
+</table>
+
+<%= image_tag attachments['prepcloud_email.png'].url -%>

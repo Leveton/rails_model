@@ -1,0 +1,71 @@
+<div class="row">
+      <div class="span10">
+        <h2>Choose difficulty level or try the <%= link_to 'demo', demo_path %></h2><br />
+        <ul class="media-grid">
+
+<% unless user_signed_in? %>
+
+        <li>
+          <a href="/demo" style="background:#F5F5F5;">
+            <%= image_tag("Chess_queen2.png")%>
+          </a>
+        </li>
+        <li>
+          <a href="/puzzle1" style="background:#F5F5F5;">
+            <%= image_tag("Chess_pawn.png")%>
+          </a>
+        </li>
+
+<% else %>
+
+        <li>
+          <a href="/puzzle1" style="background:#F5F5F5;">
+            <%= image_tag("Chess_pawn.png")%>
+          </a>
+        </li>
+        <li>
+          <a href="/quarterback" style="background:#F5F5F5;">
+            <%= image_tag("Chess_bishop.png")%>
+          </a>
+        </li>
+<% end %>
+        <li>
+          <a href="/puzzle2" style="background:#F5F5F5;">
+            <%= image_tag("Chess_knight.png")%>
+          </a>
+        </li>
+        <li>
+          <a href="/puzzle3" style="background:#F5F5F5;">
+            <%= image_tag("Chess_king.png")%>
+          </a>
+        </li>
+
+      </ul>
+       </div>
+          <% unless user_signed_in? %>
+        <%= render 'shared/right_column' %>
+
+<% else %>
+        <%= render 'shared/user_right_column' %>
+<% end %>
+
+
+<div class="fb-like" data-href="http://www.prepcloud.com" data-send="false" data-width="450" data-show-faces="true"></div><br /><br />
+<g:plusone annotation="inline"></g:plusone>
+
+<div id="fb-root"></div>
+<script type="text/javascript">
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  (function() {
+    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+    po.src = 'https://apis.google.com/js/plusone.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+  })();
+</script>

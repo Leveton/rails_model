@@ -1,0 +1,100 @@
+<div class="middle">
+
+
+<table>
+
+<div class="cen_scores_top">
+<% @courses.each do |l| %>
+<%= l['quiz_name'] %><br /><br />
+<% end %>
+
+</div>
+	<tr>
+		<td>
+		<div class="date_taken">
+		question number
+		<br /><br />
+		<ul>
+     <% @interactions.each do |l| %>
+     <%= link_to l['question_number'], :action => 'PrepTest61_harder_quiz_show', :controller => "questions" %><br /><br />
+     <% end %>
+    </ul>
+		</td>
+		</div> 
+		
+		<td>
+		<div class="section_type">
+		time used
+		<br /><br />
+		<ul>
+     <% @interactions.each do |l| %>
+     <%= l['latency'] %><br /><br />
+     <% end %>
+    </ul>
+		</td>
+		</div> 
+		
+		<td>
+		<div class="difficulty_level">
+		question type
+		<br /><br />
+		<ul>
+     <% @courses.each do |l| %>
+     <%= l['question_type'] %><br /><br />
+     <% end %>
+    </ul>
+		</td>
+		</div> 
+		
+		<td>
+		<div class="quiz_type">
+		correct answer
+		<br /><br />
+		<ul>
+		<% @interactions.each do |l| %>
+		<%= l['correct_answer'] %><br /><br />
+		<% end %>
+		</ul>
+		</td>
+		</div>
+		
+		<td>
+		<div class="correct">
+		your answer
+		<br /><br />
+		<ul>
+		<% @interactions.each do |l| %>
+		<%= l['student_answer'] %><br /><br />
+		<% end %>
+		</ul>
+		</td>
+		</div>
+		
+		<td>
+		<div class="you_answered">
+		date
+		<br /><br />
+		<ul>
+		<% @interactions.each do |l| %>
+		<%= l['date'] %><br /><br />
+		<% end %>
+		</ul>
+		</td>
+		</div>
+		
+		<td>
+		<div class="latency">
+		
+		<br /><br />
+		<ul>
+		
+		</ul>
+		</td>
+		</div>
+		
+		
+	</tr>
+	
+</table>
+</div>
+

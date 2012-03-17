@@ -1,0 +1,99 @@
+
+
+   <%= link_to 'sandbox', sandbox_path %><br />
+   <%= link_to 'demo_puzzle', demo_puzzle_path %><br />
+   <%= link_to 'exercise0', exercise0_path %><br />
+   <%= link_to 'exercise1', exercise1_path %><br />
+   <%= link_to 'exercise2', exercise2_path %><br />
+   <%= link_to 'exercise3', exercise3_path %><br />
+   <%= link_to 'exercise4', exercise4_path %><br />
+   <%= link_to 'exercise5', exercise5_path %><br />
+   <%= link_to 'exercise6', exercise6_path %><br />
+
+
+   <%= link_to 'bete_noire', bete_noire_path %><br />
+   <%= link_to 'enfant_terrible', enfant_terrible_path %><br />
+   <%= link_to 'deus_ex_machina', deus_ex_machina_path %><br />
+   <%= link_to 'deus_ex_rompecabezas', deus_ex_rompecabezas_path %><br />
+   <%= link_to 'de_rigueur', de_rigueur_path %><br />
+   <%= link_to 'ne_plus_ultra', ne_plus_ultra_path %><br />
+   <%= link_to 'deus_ex_machina_save', deus_ex_machina_save_path %><br />
+   <%= link_to 'wunderkind', wunderkind_path %><br />
+   <%= link_to 'force_majeure', force_majeure_path %><br />
+   <%= link_to 'tutorial', tutorial_path %><br />
+
+   <%= link_to 'practice', practice_path %><br />
+   <%= link_to 'easymedhardLR', easymedhardLR_path %><br />
+   <%= link_to 'easymedhard', easymedhardLR_path %><br />
+   <%= link_to 'easymedhardAR', easymedhardAR_path %><br />
+   <%= link_to 'quizcenLR', quizcenLR_path %><br />
+   <%= link_to 'quiz_cenRC', quiz_cenRC_path %><br />
+   <%= link_to 'quiz_cenAR', quiz_cenAR_path %><br />
+   <%= link_to 'coming_soon', comingsoon_path %><br />
+   'about',     'pagesabout'
+   'help',      'pageshelp'
+   'faq',      'pagesfaq'
+   'tutors',      'pagestutors'
+   'diagnostic',      'pagesdiagnostic'
+   'pricing',      'pagespricing'
+   'testimonials',      'pagescoming_soon'
+   'blog',      'pagescoming_soon'
+   'news',      'pagescoming_soon'
+   'compare',      'pagescompare'
+   'legal',      'pageslegal'
+   'privacy',      'pagesprivacy'
+   'chat',      'pageschat'
+   'sitemap',   'pagessitemap'
+
+   'tutoring',      'schedulestutoring'
+   'tutoringbychat',      'schedulesbychat'
+   'tutoringbyphone',      'schedulesbyphone'
+   'tutoringoneonone',      'schedulesoneonone'
+   'tutoringoneonone_temp',      'schedulesoneonone_temp'
+   'chat_session',      'scheduleschat_session'
+
+
+
+   'internalreport',   'assessmentsscript1'
+   'internalread',   'assessmentsscript2'
+   'preptest61_easier_quiz',   'assessmentspreptest61_easier_quiz'
+   'preptest61_medium_quiz',   'assessmentspreptest61_medium_quiz'
+   'preptest61_harder_quiz',   'assessmentspreptest61_harder_quiz'
+   'preptest61_easier_quiz_show',   'assessmentspreptest61_easier_quiz_show'
+   'preptest61_medium_quiz_show',   'assessmentspreptest61_medium_quiz_show'
+   'preptest61_harder_quiz_show',   'assessmentspreptest61_harder_quiz_show'
+   'games_quiz1',   'assessmentsgames_quiz_show'
+   'reading_quiz1',   'assessmentsreading_quiz_show'
+   'pt61easy1',   'assessmentspt61easy1'
+   'preptest61_reading_quiz1',   'assessmentspreptest61_reading_quiz1'
+   'pt61_games_quiz1',   'assessmentspt61_games_quiz1'
+
+   'PrepTest61_easier_quiz_show',   'questionsPrepTest61_easier_quiz_show'
+   'PrepTest61_medium_quiz_show',   'questionsPrepTest61_medium_quiz_show'
+   'PrepTest61_harder_quiz_show',   'questionsPrepTest61_harder_quiz_show'
+   'pt61_games_quiz1_show',   'questionspt61_games_quiz1_show'
+   'preptest61_reading_quiz1_show',   'questionspreptest61_reading_quiz1_show'
+
+   'pt61_easier_buy',      'paymentspt61_easier_buy'
+   'pt61_medium_buy',      'paymentspt61_medium_buy'
+   'pt61_harder_buy',      'paymentspt61_harder_buy'
+   'pt61_reading_quiz_buy',      'paymentspt61_reading_quiz_buy'
+   'pt61_games_quiz_buy',      'paymentspt61_games_quiz_buy'
+   'tutoring_buy',      'paymentstutoring_buy'
+   'checkout_quiz_LR',      'paymentscheckout_quiz_LR'
+   'checkout_quiz_RC',      'paymentscheckout_quiz_RC'
+   'checkout_quiz_AR',      'paymentscheckout_quiz_AR'
+   'checkout_test',      'paymentscheckout_test'
+   'checkout_tutoring',      'paymentscheckout_tutoring'
+   'confirm_quiz_LR',      'paymentsconfirm_quiz_LR'
+   'confirm_quiz_RC',      'paymentsconfirm_quiz_RC'
+   'confirm_quiz_AR',      'paymentsconfirm_quiz_AR'
+   'confirm_test',      'paymentsconfirm_test'
+   'confirm_tutoring',      'paymentsconfirm_tutoring'
+   'complete_quiz_LR',      'paymentscomplete_quiz_LR'
+   'complete_quiz_RC',      'paymentscomplete_quiz_RC'
+   'complete_quiz_AR',      'paymentscomplete_quiz_AR'
+   'complete_test',      'paymentscomplete_test'
+   'complete_tutoring',      'paymentscomplete_tutoring'
+   'cancel',      'paymentscancel'
+   'error',      'paymentserror'

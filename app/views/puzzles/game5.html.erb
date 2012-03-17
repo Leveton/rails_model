@@ -1,0 +1,167 @@
+<div class = 'row'>
+<div class = 'span10'>
+  <div id = "demo_frame">
+<h1>Boss level!  Put the blocks in their correct cell.</h1><br />
+
+
+<p>1) K cannot be in the second row or the first column<br />
+
+2) If N shares a column with M, it shares a column with L<br />
+
+3) J shares a row with K but not a column with M<br />
+
+4) The middle row has one block exactly<br />
+
+5) L is in a higher row than N<br /></p>
+
+        <div id="sudoku_content">
+
+            <table class="sudoku" cellpadding="0" cellspacing="0">
+                <div class="sudoku_mid">
+                    <tr class="r0">
+
+                        <td class="b10"><input type="text"  value=""  ></td>
+                        <td class="b10"><input type="text"  value="C1"  ></td>
+                        <td class="b10"><input type="text"  value="C2"  ></td>
+
+                    </tr>
+                    <tr class="r0">
+
+                        <td class="b10"><input type="text"  value="R1"  ></td>
+                        <td class="c10" id = "R1, C1"></td>
+                        <td class="c10" id = "R1, C2"></td>
+
+                    </tr>
+                    <tr class="r1">
+
+                        <td class="b10"><input type="text"  value="R2"  ></td>
+                        <td class="c10" id = "R2, C1"></td>
+                        <td class="c10" id = "R2, C2"></td>
+
+
+                    </tr>
+                    <tr class="r2">
+
+                        <td class="b10"><input type="text"  value="R3"  ></td>
+                        <td class="c10" id = "R3, C1"></td>
+                        <td class="c10" id = "R3, C2"></td>
+
+
+                    </tr>
+                </div>
+
+            </table>
+
+        </div>
+
+ <div class = "demo_frame_bottom2">
+<div class="draggable" id = "J">
+  <p>J</p>
+</div>
+<div class="draggable" id = "K">
+  <p>K</p>
+</div>
+<div class="draggable" id = "L">
+	<p>L</p>
+</div>
+<div class="draggable" id = "M">
+	<p>M</p>
+</div>
+<div class="draggable" id = "N">
+	<p>N</p>
+</div>
+
+<button class = "btn" onclick="compareAnswers(boxes, allboxes4, '#demo_frame', 'puzzles/quarterback/game5', '#score_right p');">check</button>
+<button class = "btn" onclick = "resetGame('#demo_frame', 'puzzles/quarterback/game5', '#score_right p', boxes);" >reset</button>
+</div>
+</div>
+<div id = "exercise_form" class = "hidden" >
+<div class = "exercise_form_title1">That's correct!</div>
+<div class = "exercise_form_title2" style="background:#88ff77;">Below is your time per puzzle</div>
+<div class = "exercise_form_title3" style="background:#66ff88;">Remember, it's all about speed..*</div>
+
+<div class = 'user_chart' style="margin-top:15px;">
+<h3>average user's time per puzzle (in seconds)</h3>
+<div class = 'user_barchart'><div class = 'user_y_axis'></div></div>
+</div><br />
+
+<div class = 'user_chart'>
+<h3>Your average time per puzzle (in seconds)</h3>
+<div class = 'prepcloud_barchart'><div class = 'prepcloud_y_axis'></div></div>
+</div>
+
+<div class = 'user_chart' style="margin-top:15px;">
+<h3>average number of guesses per user</h3>
+<div class = 'user_barchart2'><div class = 'user_y_axis2'></div></div>
+</div><br />
+
+<div class = 'user_chart'>
+<h3>Your number of guesses</h3>
+<div class = 'prepcloud_barchart2'><div class = 'prepcloud_y_axis2'></div></div>
+</div>
+
+<div class = 'user_chart' style="margin-top:15px;">
+<h3>average number of resets per user</h3>
+<div class = 'user_barchart3'><div class = 'user_y_axis3'></div></div>
+</div><br />
+
+<div class = 'user_chart'>
+<h3>Your number of resets</h3>
+<div class = 'prepcloud_barchart3'><div class = 'prepcloud_y_axis3'></div></div>
+</div>
+
+<% if current_user.saved_check('Quarterback5').empty? %>
+<div id = "puzzle_save_option">
+<h2>Save your results?</h2><br />
+<button class = "btn" onclick="makePuzzle();">yes</button>
+<form class ="pull-right"method='link' action='/'><button class="btn">no</button></form>
+</div>
+
+<div id = "puzzle_saved" style="margin-top:10px;" class="hidden"><p>Your results have been saved, <a href='<%= quarterback_show_path %>'>click here</a> to see all of your results.</p></div>
+
+<% else %>
+<div id = "puzzle_save_option">
+<h2>You have already saved your results for this puzzle</h2>
+</div>
+<% end %>
+
+
+</div>
+
+<div id = "timesUp_form" class = "hidden" >
+<h1>Time's Up!</h1>
+<h2>Would you like to repeat the puzzle or exit?</h2><br /><br />
+<p>Try as many times as it takes you to get it right</p><br />
+<div class = "btn"><a><%= link_to "repeat", game5_path %></a></div>
+<div class = "btn" style="float:right;"><a><%= link_to "exit", root_path %></a></div>
+</div>
+</div>
+
+<div class="span4">
+    <div class="puzzle_panel">
+    <div id ="score_right_timer"><strong></strong><p></p></div>
+    <div id ="score_right"><strong>Your Answer:  </strong></div>
+    <div class="fuckyou"><div class="boxgrid slideright"><div class="cover boxcaption"style="background:#2F2F2F;">hint</div><p></p></div></div>
+    </div>
+</div>
+
+</div>
+
+<script src="https://www.google.com/jsapi?key=ABQIAAAA5TxFSmgopWCajQNyTIoT8hStcRCLXCr0vyCftWOM2tQQST_-5hSVq0YI4pspGoXIGxDHdbH4onBpWw" type="text/javascript"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script language="Javascript" type="text/javascript">google.load("jqueryui", "1.8.16");</script>
+<script type="text/javascript" src="/javascripts/jquery/draggableDroppable.min.js"></script>
+<script type="text/javascript" src="/javascripts/jquery/jquery.ui.mouse.min.js"></script>
+<script type="text/javascript" src="/javascripts/d3/d3.min.js"></script>
+<script type="text/javascript" src="/javascripts/controllers/quarterback/game5/game5.min.js"></script>
+<script type="text/javascript" src="/javascripts/controllers/quarterback/game5/d3.js"></script>
+<script src="/javascripts/controllers/backbonePuzzles.js"></script>
+<script>
+function makePuzzle(){
+        Puzzles.create({title:'Quarterback5', latency:user_data, attempts:attempts, resets:resets, done:true, user_id:'<%= current_user.id %>'});
+        $('#puzzle_saved').removeClass("hidden");
+        $('#puzzle_save_option').addClass("hidden");
+
+}
+</script>

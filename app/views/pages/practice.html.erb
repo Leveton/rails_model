@@ -1,0 +1,25 @@
+<div class="middle">
+              <%= render 'devise/shared/left_column' %>
+
+ <div class="con_cen">
+
+  <div class="chat_left">
+      <a><% signup = image_tag("multiple_choice4.png", :alt => "", :class => "") %></a>
+      <%= link_to signup,  sandbox_path %>
+	</div>	  
+  
+  <div class="chat_right">
+      <a><% signdown = image_tag("multiple_choice3.png", :alt => "", :class => "") %></a>
+      <%= link_to signdown,  assessments_path %>
+  </div>
+ </div>
+
+              
+              
+              <% if user_signed_in? %>
+              <%= render 'devise/shared/score_feed' %>
+              <% else %>
+              <%= render 'devise/shared/right_column' %>
+              <% end %>
+              
+</div>     

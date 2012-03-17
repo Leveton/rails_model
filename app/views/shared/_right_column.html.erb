@@ -1,0 +1,50 @@
+<style>
+ul.homepage_right_column li{
+	color:#000000;
+}
+</style>
+
+<div class="span4">
+               <h2 style = 'color:#fff;'>Hello</h2><br />
+                <div id="accordion">
+	            <h3><a>logic games in the browser</a></h3>
+	              <div>
+                    <ul class = "homepage_right_column">
+			        <li>learn LSAT logic</li>
+			        <li>play with friends*</li>
+			        <li>Free puzzles</li>
+		          </ul>
+  	              </div>
+                 <h3><a>Instant performance stats</a></h3>
+                   <div>
+                    <ul class = "homepage_right_column">
+			       <li>time graphs</li>
+			       <li>accuracy graphs</li>
+                   <li>player comparisons</li>
+		          </ul>
+	              </div>
+	            <h3><a>Other services</a></h3>
+	              <div>
+                    <ul class = "homepage_right_column">
+                      <li>One-on-one tutoring</li>
+                      <li>Full-length LSAT's</li>
+                      <li>LSAT sections a la carte</li>
+			          <br /><br />
+                      <li style = "font-size:.7em;">coming soon</li>
+		          </ul>
+	               </div>
+
+                </div>
+          </div>
+       </div>
+
+  <script src="/javascripts/jquery/jquery.ui.widget.min.js"></script>
+	<script src="/javascripts/jquery/jquery.ui.accordion.min.js"></script>
+
+	<script>
+	$(function() {
+		$( "#accordion" ).accordion({
+			collapsible: true
+		});
+	});
+	</script>

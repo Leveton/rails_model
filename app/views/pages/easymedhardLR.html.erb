@@ -1,0 +1,71 @@
+<div class="middle">
+
+<%= render 'devise/shared/left_column' %>
+
+             
+ <div class="con_cen2">
+                      
+<div class="easymedhard">  
+  
+<div class="LR_top">
+<h1>Logical Reasoning Dollar Quizzes</h1><br /><br />
+<p>Choose between three difficulty levels.  Most students start with the easier level and climb from there</p> 
+<h2><%= link_to "Have quiz credits?", quiz_cenLR_path %></h2>                                   
+<div class="easymedhard_space">
+</div>  
+</div>  
+                      
+                      
+<div class="facil">
+<h1>easy</h1><br /><br />
+<p>A ten question, fourteen minute timed quiz.  The average beginning student gets seven quesions right.</p> 
+                      
+<div class="easymedhard_space">
+</div>
+<a><% pt61_easier_buy_google = image_tag("Google-wallet.png", :alt => "pay with PayPal", :class => "") %></a>
+<%= link_to pt61_easier_buy_google, coming_soon_path, :rel => "facebox" %>                      
+<a><% pt61_easier_buy = image_tag("paypal6.png", :alt => "pay with PayPal", :class => "") %></a>
+<%= link_to pt61_easier_buy, pt61_easier_buy_path %>
+
+                      
+</div>
+                      
+<div class="medio">
+<h1>medium</h1><br /><br />
+<p>A ten question, fourteen minute timed quiz.  The average beginning student gets five quesions right.</p> 
+                      
+<div class="easymedhard_space">
+</div>
+<a><% pt61_medium_buy_google = image_tag("Google-wallet.png", :alt => "pay with PayPal", :class => "") %></a>
+<%= link_to pt61_medium_buy_google, coming_soon_path, :rel => "facebox" %>   
+<a><% pt61_medium_buy = image_tag("paypal6.png", :alt => "pay with PayPal", :class => "") %></a>
+<%= link_to pt61_medium_buy, pt61_medium_buy_path %>
+</div>
+                      
+<div class="dificil">
+<h1>hard</h1><br /><br />
+<p>A ten question, fourteen minute timed quiz.  The average, beginning student gets less than five quesions right.</p> 
+                      
+<div class="easymedhard_space">
+</div>
+<a><% pt61_harder_buy_google = image_tag("Google-wallet.png", :alt => "pay with PayPal", :class => "") %></a>
+<%= link_to pt61_harder_buy_google, coming_soon_path, :rel => "facebox" %>                      
+<a><% pt61_harder_buy = image_tag("paypal6.png", :alt => "pay with PayPal", :class => "") %></a>
+<%= link_to pt61_harder_buy, pt61_harder_buy_path %>           
+                      
+</div>
+
+
+                      
+</div>
+</div>
+
+              
+<% if user_signed_in? %>
+<%= render 'devise/shared/score_feed' %>
+<% else %>
+<%= render 'devise/shared/right_column' %>
+<% end %>
+              
+   
+</div>

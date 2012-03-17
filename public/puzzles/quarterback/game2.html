@@ -1,0 +1,93 @@
+<script>
+$(function() {
+		$( ".draggable" ).draggable({
+
+		  start: function( event, ui ) {
+		    $( this )
+		       littlebox = $( this ).attr('id');
+		       }
+		        });
+		$( ".droppable0b0" ).droppable({
+			drop: function( event, ui ) {
+				$( this )
+				  .css( "background-color", "#D3D9E9" )
+				  bigbox = $( this ).attr('id')
+				  game2(bigbox)
+				  if (arrayLength(boxes) == true){
+				    $('#score_right').append("<p>" + (littlebox) + "-" + (bigbox) + "</p>");
+			      boxes.push((littlebox) + (bigbox));
+			      }
+			    boxColors2(littlebox)
+				  }
+				});
+		$( ".droppable0b" ).droppable({
+			drop: function( event, ui ) {
+				$( this )
+				  .css( "background-color", "#34489E" )
+				  bigbox = $( this ).attr('id')
+				  game2(bigbox)
+				  if (arrayLength(boxes) == true){
+				    $('#score_right').append("<p>" + (littlebox) + "-" + (bigbox) + "</p>");
+			      boxes.push((littlebox) + (bigbox));
+			      }
+			    boxColors2(littlebox)
+				  }
+		  });
+		$( ".droppable0" ).droppable({
+			drop: function( event, ui ) {
+				$( this )
+				  .css( "background-color", "#0D2424" )
+				  bigbox = $( this ).attr('id')
+				  game2(bigbox)
+				  if (arrayLength(boxes) == true){
+				    $('#score_right').append("<p>" + (littlebox) + "-" + (bigbox) + "</p>");
+			      boxes.push((littlebox) + (bigbox));
+			      }
+			    boxColors2(littlebox)
+				  }
+		});
+});
+</script>
+<h1>Russian Dolls</h1>
+
+<div class = "demo_frame_top">
+
+<p>Put the blocks in their correct doll<br />
+
+1) No doll can have more than two blocks<br />
+
+2) J is not alone in a doll<br />
+
+3) The little doll has fewer blocks than the other dolls<br />
+
+4) N is in a doll with K<br />
+
+5) M is in the middle doll<br /></p>
+<div class="draggable" id = "J">
+	<p>J</p>
+</div>
+<div class="draggable" id = "K">
+	<p>K</p>
+</div>
+<div class="draggable" id = "L">
+	<p>L</p>
+</div>
+<div class="draggable" id = "M">
+	<p>M</p>
+</div>
+<div class="draggable" id = "N">
+	<p>N</p>
+</div>
+</div>
+
+<div class = demo_frame_bottom style = "height:370px;background:transparent">
+<div class="droppable0" id = "1" style="background:red;">
+	<p>big doll</p>
+	<div class="droppable0b" id = "2" ><p>middle doll</p>
+	  <div class="droppable0b0" id = "3"><p>little doll</p></div>
+	</div>
+</div>
+</div>
+<button class = "btn" style = "float:left;margin:10px;" onclick="compareAnswers(boxes, allboxes2, '#demo_frame', 'puzzles/quarterback/game2', '#score_right p');">check</button>
+<button class = "btn" style = "float:left;margin:10px;" onclick = "resetGame('#demo_frame', 'puzzles/quarterback/game2', '#score_right p', boxes);" >reset</button>
+</div>

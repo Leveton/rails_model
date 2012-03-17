@@ -1,0 +1,85 @@
+/* ajax pagination */
+if (history && history.pushState) {
+  $(function() {
+    $("t.assessments th a, t.assessments .pagination a").live("click", function(e) {
+      $.getScript(this.href);
+      history.pushState(null, document.title, this.href);
+      e.preventDefault();
+    });
+    
+  });
+}
+
+function loadReplace(a, b, c, d){
+	$(a).detach();
+	$(b).detach();
+	$(c).load(d);
+} 
+/*highlights element background*/
+$(document).ready(function(){
+
+  
+ $('.choice1_home').live('mouseover', function() {
+    $(this).css('background-color', '#34489E');
+  });
+  $('.choice1_home').live('mouseout', function() {
+    $(this).css('background-color', '#F5F5F5');
+  });
+
+  $('.choices_top .choice_2').live('mouseover', function() {
+    $(this).css('background-color', '#34489E');
+  });
+  $('.choices_top .choice_2').live('mouseout', function() {
+    $(this).css('background-color', '#F5F5F5');
+  });
+
+  $('.choices_bottom .choice_3').live('mouseover', function() {
+    $(this).css('background-color', '#34489E');
+  });
+  $('.choices_bottom .choice_3').live('mouseout', function() {
+    $(this).css('background-color', '#F5F5F5');
+  });
+
+  $('.choices_top .choice_4').live('mouseover', function() {
+    $(this).css('background-color', '#34489E');
+  });
+  $('.choices_top .choice_4').live('mouseout', function() {
+    $(this).css('background-color', '#F5F5F5');
+  });
+  $('.account').live('mouseover', function() {
+    $(this).css('background-color', 'red');
+  });
+  $('.account').live('mouseout', function() {
+    $(this).css('background-color', '#34489E');
+  });
+  $('.login').live('mouseover', function() {
+    $(this).css('background-color', 'red');
+  });
+  $('.login').live('mouseout', function() {
+    $(this).css('background-color', '#27461F');
+  });
+  $('.chat_left').live('mouseover', function() {
+    $(this).css('background-color', '#0E265C');
+  });
+  $('.chat_left').live('mouseout', function() {
+    $(this).css('background-color', '#0E2637');
+  });
+  $('.chat_right').live('mouseover', function() {
+    $(this).css('background-color', '#D3D8C9');
+  });
+  $('.chat_right').live('mouseout', function() {
+    $(this).css('background-color', '#D3D8E8');
+  });
+
+});
+
+/*triggers facebox on any tag with :rel="facebox"*/
+jQuery(document).ready(function($) {
+  $('a[rel*=facebox]').facebox()
+})
+
+$(document).bind('beforeReveal.facebox', function() {
+    var height = $(window).height() - 100;
+    $('#facebox .content').css('height', height + 'px');
+    $('#facebox').css('top', ($(window).scrollTop() + 10) + 'px');
+});

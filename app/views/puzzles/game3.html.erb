@@ -1,0 +1,135 @@
+<div class = 'row'>
+<div class = 'span10'>
+  <div id = "demo_frame">
+   <h1>SUDOTIKU!</h1><br /><br />
+   <h2>Type in the remaining blocks based on these rules:</h2><br />
+   <p>1) All the rows must add up to 15<br />
+
+      2) All the columns must add up to 15<br />
+
+      3) All the diagonals must add up to 15<br /></p>
+
+        <div id="sudoku_content">
+
+            <table class="sudoku" cellpadding="0" cellspacing="0">
+                <div class="sudoku_mid">
+                    <tr class="r0">
+
+                        <td class="c1"><input type="text" id="c01" value="8" class="disabled" disabled="disabled"></td>
+                        <td class="c2"><input type="text" id="c02"></td>
+                        <td class="c3"><input type="text" id="c03"></td>
+
+                    </tr>
+                    <tr class="r1">
+
+
+                        <td class="c4"><input type="text" id="c4"></td>
+                        <td class="c5"><input type="text" id="c5"></td>
+                        <td class="c6"><input type="text" id="c6" value="7" class="disabled" disabled="disabled"></td>
+
+                    </tr>
+                    <tr class="r2">
+
+                        <td class="c7"><input type="text" id="c7"></td>
+                        <td class="c8"><input type="text" id="c8"></td>
+                        <td class="c9"><input type="text" id="c9" value="2" class="disabled" disabled="disabled"></td>
+
+                    </tr>
+                </div>
+
+            </table>
+
+        </div>
+
+<div style = "clear:both;">
+<button class = "btn" style = "float:left;margin:10px;" onclick="sudotiku();">check</button>
+</div>
+
+</div>
+
+<div id = "exercise_form" class = "hidden" >
+<div class = "exercise_form_title1">That's correct!</div>
+<div class = "exercise_form_title2" style="background:#88ff77;">Below is your time per puzzle</div>
+<div class = "exercise_form_title3" style="background:#66ff88;">Remember, it's all about the speed..*</div>
+
+<div class = 'user_chart' style="margin-top:15px;">
+<h3>average user's time per puzzle (in seconds)</h3>
+<div class = 'user_barchart'><div class = 'user_y_axis'></div></div>
+</div><br />
+
+<div class = 'user_chart'>
+<h3>Your average time per puzzle (in seconds)</h3>
+<div class = 'prepcloud_barchart'><div class = 'prepcloud_y_axis'></div></div>
+</div>
+
+<div class = 'user_chart' style="margin-top:15px;">
+<h3>average number of guesses per user</h3>
+<div class = 'user_barchart2'><div class = 'user_y_axis2'></div></div>
+</div><br />
+
+<div class = 'user_chart'>
+<h3>Your number of guesses</h3>
+<div class = 'prepcloud_barchart2'><div class = 'prepcloud_y_axis2'></div></div>
+</div>
+
+<div class = 'user_chart' style="margin-top:15px;">
+<h3>average number of resets per user</h3>
+<div class = 'user_barchart3'><div class = 'user_y_axis3'></div></div>
+</div><br />
+
+<div class = 'user_chart'>
+<h3>Your number of resets</h3>
+<div class = 'prepcloud_barchart3'><div class = 'prepcloud_y_axis3'></div></div>
+</div>
+
+<% if current_user.saved_check('Quarterback3').empty? %>
+<div id = "puzzle_save_option">
+<h2>Save your results?</h2><br />
+<button class = "btn" onclick="makePuzzle();">yes</button>
+<form class ="pull-right"method='link' action='/'><button class="btn">no</button></form>
+</div>
+
+<div id = "puzzle_saved" style="margin-top:10px;" class="hidden"><p>Your results have been saved, <a href='<%= quarterback_show_path %>'>click here</a> to see all of your results.</p></div>
+
+<% else %>
+<div id = "puzzle_save_option">
+<h2>You have already saved your results for this puzzle</h2>
+</div>
+<% end %>
+
+</div>
+
+<div id = "timesUp_form" class = "hidden" >
+<h1>Time's Up!</h1>
+<h2>Would you like to repeat the puzzle or exit?</h2><br /><br />
+<p>Try as many times as it takes you to get it right</p><br />
+<div class = "btn"><a><%= link_to "repeat", game3_path %></a></div>
+<div class = "btn" style="float:right;"><a><%= link_to "exit", root_path %></a></div>
+</div>
+</div>
+
+  <div class="span4">
+    <div class="puzzle_panel">
+    <div id ="score_right_timer"><strong></strong><p></p></div>
+    <div id ="score_right"><strong>Your Answer:  </strong></div>
+    <div class="fuckyou"><div class="boxgrid slideright"><div class="cover boxcaption"style="background:#2F2F2F;">hint</div><p></p></div></div>
+    </div>
+  </div>
+
+</div>
+
+<script src="https://www.google.com/jsapi?key=ABQIAAAA5TxFSmgopWCajQNyTIoT8hStcRCLXCr0vyCftWOM2tQQST_-5hSVq0YI4pspGoXIGxDHdbH4onBpWw" type="text/javascript"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script language="Javascript" type="text/javascript">google.load("jqueryui", "1.8.16");</script>
+<script type="text/javascript" src="/javascripts/jquery/jquery.ui.mouse.min.js"></script>
+<script type="text/javascript" src="/javascripts/d3/d3.min.js"></script>
+<script type="text/javascript" src="/javascripts/controllers/quarterback/game3/game3.js"></script>
+<script type="text/javascript" src="/javascripts/controllers/quarterback/game3/d3.min.js"></script>
+<script src="/javascripts/controllers/backbonePuzzles.js"></script>
+<script>
+function makePuzzle(){
+        Puzzles.create({title:'Quarterback3', latency:user_data, attempts:attempts, resets:resets, done:true, user_id:'<%= current_user.id %>'});
+        $('#puzzle_saved').removeClass("hidden");
+        $('#puzzle_save_option').addClass("hidden");
+}
+</script>

@@ -1,0 +1,226 @@
+<div id="permanent_success">All completed quizzes, click on the quiz title for more details.</div><br />
+
+
+<table>
+
+
+	<tr>
+		<td>
+		<div class="date_taken">
+		Quiz Name
+		<br /><br />
+		<ul>
+
+     <% unless @easy_courses.nil? %>
+     <% @easy_courses.each do |l| %>
+     <a><%= link_to l['quiz_name'], preptest61_easier_quiz_show_path %></a><br /><br />
+     <% end %>
+     <% end %>
+     <% unless @med_courses.nil? %>
+     <% @med_courses.each do |l| %>
+     <a><%= link_to l['quiz_name'], preptest61_medium_quiz_show_path %></a><br /><br />
+     <% end %>
+     <% end %>
+     <% unless @hard_courses.nil? %>
+     <% @hard_courses.each do |l| %>
+     <a><%= link_to l['quiz_name'], preptest61_harder_quiz_show_path %></a><br /><br />
+     <% end %>
+     <% end %>
+     <% unless @RC_quiz1_courses.nil? %>
+     <% @RC_quiz1_courses.each do |l| %>
+     <a><%= link_to l['quiz_name'], reading_quiz1_path %></a><br /><br />
+     <% end %>
+     <% end %>
+     <% unless @AR_quiz1_courses.nil? %>
+     <% @AR_quiz1_courses.each do |l| %>
+     <a><%= link_to l['quiz_name'], games_quiz1_path %></a><br /><br />
+     <% end %>
+     <% end %>
+    </ul>
+		</td>
+		</div>
+
+		<td>
+		<div class="section_type">
+		section type
+		<br /><br />
+		<ul>
+     <% unless @easy_courses.nil? %>
+     <% @easy_courses.each do |l| %>
+     <%= l['section'] %><br /><br />
+     <% end %>
+     <% end %>
+     <% unless @med_courses.nil? %>
+     <% @med_courses.each do |l| %>
+     <%= l['section'] %><br /><br />
+     <% end %>
+     <% end %>
+     <% unless @hard_courses.nil? %>
+     <% @hard_courses.each do |l| %>
+     <%= l['section'] %><br /><br />
+     <% end %>
+     <% end %>
+     <% unless @RC_quiz1_courses.nil? %>
+     <% @RC_quiz1_courses.each do |l| %>
+     <%= l['section'] %><br /><br />
+     <% end %>
+     <% end %>
+     <% unless @AR_quiz1_courses.nil? %>
+     <% @AR_quiz1_courses.each do |l| %>
+     <%= l['section'] %><br /><br />
+     <% end %>
+     <% end %>
+    </ul>
+		</td>
+		</div>
+
+		<td>
+		<div class="difficulty_level">
+		score
+		<br /><br />
+		<ul>
+     <% unless @easy_quizdata.nil? %>
+     <% @easy_quizdata.each do |l| %>
+     <%= l['score'] %><br /><br />
+     <% end %>
+     <% end %>
+     <% unless @med_quizdata.nil? %>
+     <% @med_quizdata.each do |l| %>
+     <%= l['score'] %><br /><br />
+     <% end %>
+     <% end %>
+     <% unless @hard_quizdata.nil? %>
+     <% @hard_quizdata.each do |l| %>
+     <%= l['score'] %><br /><br />
+     <% end %>
+     <% end %>
+      <% unless @RC_quiz1_quizdata.nil? %>
+     <% @RC_quiz1_quizdata.each do |l| %>
+     <%= l['score'] %><br /><br />
+     <% end %>
+     <% end %>
+      <% unless @AR_quiz1_quizdata.nil? %>
+     <% @AR_quiz1_quizdata.each do |l| %>
+     <%= l['score'] %><br /><br />
+     <% end %>
+     <% end %>
+    </ul>
+		</td>
+		</div>
+
+		<td>
+		<div class="quiz_type">
+		out of
+		<br /><br />
+		<ul>
+		<% unless @easy_courses.nil? %>
+		<% @easy_courses.each do |l| %>
+		<%= l['total_questions'] %><br /><br />
+		<% end %>
+		<% end %>
+		<% unless @med_courses.nil? %>
+		<% @med_courses.each do |l| %>
+		<%= l['total_questions'] %><br /><br />
+		<% end %>
+		<% end %>
+		<% unless @hard_courses.nil? %>
+		<% @hard_courses.each do |l| %>
+		<%= l['total_questions'] %><br /><br />
+		<% end %>
+		<% end %>
+		<% unless @RC_quiz1_courses.nil? %>
+		<% @RC_quiz1_courses.each do |l| %>
+		<%= l['total_questions'] %><br /><br />
+		<% end %>
+		<% end %>
+		<% unless @AR_quiz1_courses.nil? %>
+		<% @AR_quiz1_courses.each do |l| %>
+		<%= l['total_questions'] %><br /><br />
+		<% end %>
+		<% end %>
+		</ul>
+		</td>
+		</div>
+
+		<td>
+		<div class="correct">
+		difficulty level
+		<br /><br />
+		<ul>
+		<% unless @easy_courses.nil? %>
+		<% @easy_courses.each do |l| %>
+		<%= l['difficulty'] %><br /><br />
+		<% end %>
+		<% end %>
+		<% unless @medium_courses.nil? %>
+		<% @med_courses.each do |l| %>
+		<%= l['difficulty'] %><br /><br />
+		<% end %>
+		<% end %>
+		<% unless @hard_courses.nil? %>
+		<% @hard_courses.each do |l| %>
+		<%= l['difficulty'] %><br /><br />
+		<% end %>
+		<% end %>
+		<% unless @RC_quiz1_courses.nil? %>
+		<% @RC_quiz1_courses.each do |l| %>
+		<%= l['difficulty'] %><br /><br />
+		<% end %>
+		<% end %>
+		<% unless @AR_quiz1_courses.nil? %>
+		<% @AR_quiz1_courses.each do |l| %>
+		<%= l['difficulty'] %><br /><br />
+		<% end %>
+		<% end %>
+		</ul>
+		</td>
+		</div>
+
+		<td>
+		<div class="you_answered">
+		time used
+		<br /><br />
+		<ul>
+		<% unless @easy_quizdata.nil? %>
+		<% @easy_quizdata.each do |l| %>
+		<%= l['time_taken'] %><br /><br />
+		<% end %>
+		<% end %>
+		<% unless @med_quizdata.nil? %>
+		<% @med_quizdata.each do |l| %>
+		<%= l['time_taken'] %><br /><br />
+		<% end %>
+		<% end %>
+		<% unless @hard_quizdata.nil? %>
+		<% @hard_quizdata.each do |l| %>
+		<%= l['time_taken'] %><br /><br />
+		<% end %>
+		<% end %>
+		<% unless @RC_quiz1_quizdata.nil? %>
+		<% @RC_quiz1_quizdata.each do |l| %>
+		<%= l['time_taken'] %><br /><br />
+		<% end %>
+		<% end %>
+		<% unless @AR_quiz1_quizdata.nil? %>
+		<% @AR_quiz1_quizdata.each do |l| %>
+		<%= l['time_taken'] %><br /><br />
+		<% end %>
+		<% end %>
+		</ul>
+		</td>
+		</div>
+
+		<td>
+		<div class="latency">
+		date taken
+		<br /><br />
+		<ul>
+
+		</ul>
+		</td>
+		</div>
+
+
+	</tr>
+
+</table>

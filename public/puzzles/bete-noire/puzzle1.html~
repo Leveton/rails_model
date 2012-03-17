@@ -1,0 +1,58 @@
+<script type="text/javascript" src="/javascripts/controllers/bete_noire/game1b.js"></script>
+<h1>Put the blocks in the right day and the right time of day.</h1><br />
+
+<div class = "demo_frame_top">
+<p>1) All three days had at least one block<br />
+
+2) No block arrived on Monday evening or Wednesday evening<br />
+
+3) J and N arrived on the same day<br />
+
+4) L arrived 3 time slots before M and before J<br />
+
+5) K was the third block to arrive<br />
+
+6) M and N arrived in the afternoon<br />
+
+7) No time of day has more than one block.<br /></p>
+
+<div style = "height:350px;width:480px;margin-bottom:-230px;">
+<div class="draggable" id = "J">
+	<p>J</p>
+</div>
+<div class="draggable" id = "K">
+	<p>K</p>
+</div>
+<div class="draggable" id = "L">
+	<p>L</p>
+</div>
+<div class="draggable" id = "M">
+	<p>M</p>
+</div>
+<div class="draggable" id = "N">
+	<p>N</p>
+</div><br />
+</div>
+</div>
+
+<div class="droppable2" style = "height:145px; width:80px; padding:0em;" id = "1">
+	<p>Mon</p>
+	<div class = "droppable" style = "height:75px;width:80px;padding:0em;background-color:#102C31; margin-left:0px;" id = "2"><p>afternoon</p></div>
+	<div class = "droppable" style = "height:75px;width:80px;padding:0em;background-color:#000; margin-left:0px; margin-top:0px;" id = "8"><p>evening</p></div>
+</div>
+<div class="droppable2" style = "height:215px; width:80px; padding:0em;" id = "3">
+	<p>Tues</p>
+	<div class = "droppable" style = "height:75px;width:80px;padding:0em;background-color:#102C31; margin-left:0px;" id = "4"><p>afternoon</p></div>
+	<div class = "droppable" style = "height:75px;width:80px;padding:0em;background-color:#000; margin-left:0px; margin-top:0px;" id = "5"><p>evening</p></div>
+</div>
+<div class="droppable2" style = "height:145px; width:80px; padding:0em;" id = "6">
+	<p>Wed</p>
+	<div class = "droppable" style = "height:75px;width:80px;padding:0em; background-color:#102C31; margin-left:0px;" id = "7"><p>afternoon</p></div>
+	<div class = "droppable" style = "height:75px;width:80px;padding:0em;background-color:#000; margin-left:0px; margin-top:0px;" id = "9"><p>evening</p></div>
+</div>
+
+<div style="margin-left:400px;">
+<button class = "btn" onclick = "compareAnswers(boxes, allboxes1, '#demo_frame', 'puzzles/bete-noire/puzzle2', '#score_right p');" >check</button>
+<button class = "btn" onclick = "resetGame('#demo_frame', 'puzzles/bete-noire/puzzle1', '#score_right p', boxes);" >reset</button>
+</div>
+</div>

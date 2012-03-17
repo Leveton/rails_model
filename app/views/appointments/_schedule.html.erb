@@ -1,0 +1,10 @@
+<tr>
+  <td class="assessment">
+    <span class="content"><%= schedule.date %></span>
+    <span class="content"><%= schedule.hour %></span>
+    <span class="timestamp">
+      Posted <%= time_ago_in_words(schedule.created_at) %> ago.
+    </span>
+  </td>
+</tr>
+

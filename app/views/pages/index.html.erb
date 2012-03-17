@@ -1,0 +1,16 @@
+<body>
+
+<div class="middle">
+              <%= render 'devise/shared/left_column' %>
+
+              <%= render 'devise/shared/con_cen' %>
+              <% if user_signed_in? %>
+              <%= render 'devise/shared/score_feed' %>
+              <% else %>
+              <%= render 'devise/shared/right_column' %>
+              <% end %>
+              
+</div>     
+
+<div class = "twitter_show"></div>
+</body>

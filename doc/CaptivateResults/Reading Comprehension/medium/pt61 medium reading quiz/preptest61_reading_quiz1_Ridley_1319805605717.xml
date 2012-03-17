@@ -1,0 +1,48 @@
+<Course>
+  <CompanyName value="Reading Comprehension"/>
+  <DepartmentName value="medium"/>
+  <CourseName value="pt61 medium reading quiz"/>
+  <LearnerName value="Ridley"/>
+  <LearnerID value="micahfsu@gmail.com"/>
+  <LessonName value="preptest61_reading_quiz1"/>
+  <QuizAttempts value="1"/>
+  <TotalQuestions value="8"/>
+  <Result>
+    <CoreData>
+      <Status value="completed"/>
+      <Location value="8"/>
+      <RawScore value="1"/>
+      <MaxScore value="8"/>
+      <MinScore value="0"/>
+      <SessionTime value="00:00:12"/>
+    </CoreData>
+    <InteractionData>
+      <Interactions>
+        <Date value="10/28/2011"/>
+        <InteractionTime value="08:39:46"/>
+        <InteractionID value="one"/>
+        <ObjectiveID value="Quiz10111"/>
+        <InteractionType value="choice"/>
+        <CorrectResponse value="D"/>
+        <StudentResponse value="C"/>
+        <Result value="W"/>
+        <Weight value="1"/>
+        <Latency value="00:00:04"/>
+        <Attempt value="1"/>
+      </Interactions>
+      <Interactions>
+        <Date value="10/28/2011"/>
+        <InteractionTime value="08:39:47"/>
+        <InteractionID value="2"/>
+        <ObjectiveID value="Quiz10111"/>
+        <InteractionType value="choice"/>
+        <CorrectResponse value="E"/>
+        <StudentResponse value="E"/>
+        <Result value="C"/>
+        <Weight value="1"/>
+        <Latency value="00:00:01"/>
+        <Attempt value="1"/>
+      </Interactions>
+    </InteractionData>
+  </Result>
+</Course>

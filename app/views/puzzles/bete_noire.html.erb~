@@ -1,0 +1,161 @@
+<div class = 'row'>
+<div class = 'span10'>
+<div id = "demo_frame">
+<h1>Put the blocks in the right day and the right time of day.</h1><br /><br />
+
+<p>1) All three days had at least one block<br />
+
+2) No block arrived on Monday evening or Wednesday evening<br />
+
+3) J and N arrived on the same day<br />
+
+4) L arrived 3 time slots before M and before J<br />
+
+5) K was the third block to arrive<br />
+
+6) M and N arrived in the afternoon<br />
+
+7) No time of day has more than one block<br /></p>
+
+<div style = "height:350px;width:480px;margin-bottom:-230px;">
+<div class="draggable" id = "J">
+	<p>J</p>
+</div>
+<div class="draggable" id = "K">
+	<p>K</p>
+</div>
+<div class="draggable" id = "L">
+	<p>L</p>
+</div>
+<div class="draggable" id = "M">
+	<p>M</p>
+</div>
+<div class="draggable" id = "N">
+	<p>N</p>
+</div><br />
+</div>
+
+<div class="droppable2" style = "height:145px; width:80px; padding:0em;" id = "1">
+	<p>Mon</p>
+	<div class = "droppable" style = "height:75px;width:80px;padding:0em;background-color:#102C31; margin-left:0px;" id = "2"><p>afternoon</p></div>
+	<div class = "droppable" style = "height:75px;width:80px;padding:0em;background-color:#000; margin-left:0px; margin-top:0px;" id = "8"><p>evening</p></div>
+</div>
+<div class="droppable2" style = "height:215px; width:80px; padding:0em;" id = "3">
+	<p>Tues</p>
+	<div class = "droppable" style = "height:75px;width:80px;padding:0em;background-color:#102C31; margin-left:0px;" id = "4"><p>afternoon</p></div>
+	<div class = "droppable" style = "height:75px;width:80px;padding:0em;background-color:#000; margin-left:0px; margin-top:0px;" id = "5"><p>evening</p></div>
+</div>
+<div class="droppable2" style = "height:145px; width:80px; padding:0em;margin-bottom:15px;" id = "6">
+	<p>Wed</p>
+	<div class = "droppable" style = "height:75px;width:80px;padding:0em; background-color:#102C31; margin-left:0px;" id = "7"><p>afternoon</p></div>
+	<div class = "droppable" style = "height:75px;width:80px;padding:0em;background-color:#000; margin-left:0px; margin-top:0px;" id = "9"><p>evening</p></div>
+</div>
+
+<div style="margin-left:400px;">
+<button class = "btn" onclick = "compareAnswers(boxes, allboxes1, '#demo_frame', 'puzzles/bete-noire/puzzle2', '#score_right p', 'puzzles/bete-noire/puzzle1');" >check</button>
+<button class = "btn" onclick = "resetGame('#demo_frame', 'puzzles/bete-noire/puzzle1', '#score_right p', boxes);" >reset</button>
+</div>
+</div>
+</div>
+<div id = "exercise_form" class = "hidden" >
+<div class = "exercise_form_title1">That's correct!</div>
+<div class = "exercise_form_title2" style="background:#88ff77;">Below is your time per puzzle</div>
+<div class = "exercise_form_title3" style="background:#66ff88;">Remember, the it's all about speed..*</div>
+
+<div class = 'user_chart' style="margin-top:15px;">
+<h3>average user's time per puzzle (in seconds)</h3>
+<div class = 'user_barchart'><div class = 'user_y_axis'></div></div>
+</div><br />
+
+<div class = 'user_chart'>
+<h3>Your average time per puzzle (in seconds)</h3>
+<div class = 'prepcloud_barchart'><div class = 'prepcloud_y_axis'></div></div>
+</div>
+
+<div class = 'user_chart' style="margin-top:15px;">
+<h3>average number of guesses per user</h3>
+<div class = 'user_barchart2'><div class = 'user_y_axis2'></div></div>
+</div><br />
+
+<div class = 'user_chart'>
+<h3>Your incorrect guesses</h3>
+<div class = 'prepcloud_barchart2'><div class = 'prepcloud_y_axis2'></div></div>
+</div>
+
+<div class = 'user_chart' style="margin-top:15px;">
+<h3>average number of resets per user</h3>
+<div class = 'user_barchart3'><div class = 'user_y_axis3'></div></div>
+</div><br />
+
+<div class = 'user_chart'>
+<h3>Your number of resets</h3>
+<div class = 'prepcloud_barchart3'><div class = 'prepcloud_y_axis3'></div></div>
+</div>
+
+<% if current_user.saved_check('Bete Noire').empty? %>
+<div id = "puzzle_save_option">
+<h2>Save your results?</h2><br />
+<button class = "btn" onclick="makePuzzle();">yes</button>
+<form class ="pull-right"method='link' action='/'><button class="btn">no</button></form>
+</div><br />
+
+<div id = "puzzle_saved" style="margin-top:10px;" class="hidden"><p>Your results have been saved, <a href='<%= puzzle2_show_path %>'>click here</a> to see all of your results.</p></div><br />
+
+<% else %>
+<div id = "puzzle_save_option">
+<h2>You have already saved your results for this puzzle</h2>
+</div>
+<% end %>
+
+<p>*and understanding contrapositives</p>
+<p>**You will then be sent to a new puzzle, you cannot repeat this puzzle after that.</p><br />
+
+</div>
+
+<div id = "timesUp_form" class = "hidden" >
+<h1>Time's Up!</h1>
+<h2>Would you like to repeat the puzzle or exit?</h2><br /><br />
+<p>Try as many times as it takes you to get it right</p><br />
+
+
+<div class = "btn"><a><%= link_to "repeat", puzzle2_path %></a></div>
+<div class = "btn" style="float:right;"><a><%= link_to "exit", root_path %></a></div>
+
+</div>
+ <div class="span4">
+    <%= render 'shared/puzzle_panel' %>
+  </div>
+
+</div>
+
+<div id="dialog-message">
+            <div class="modal-header">
+              <h3>Bete Noire</h3>
+            </div>
+            <div class="modal-body">
+</p> One medium-difficulty grouping game, one easy linear-numeric game, and one difficult linear-grouping hybrid present a good mix for this puzzle.</p>
+            </div>
+            <div class="modal-footer">
+              <button onclick="cierra_dialog('#dialog-message');" class="btn danger">Begin Quiz!</button>
+            </div>
+          </div>
+
+
+
+<script src="https://www.google.com/jsapi?key=ABQIAAAA5TxFSmgopWCajQNyTIoT8hStcRCLXCr0vyCftWOM2tQQST_-5hSVq0YI4pspGoXIGxDHdbH4onBpWw" type="text/javascript"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script language="Javascript" type="text/javascript">google.load("jqueryui", "1.8.16");</script>
+<script type="text/javascript" src="/javascripts/jquery/widgetDialogPositionProgressbar.min.js"></script>
+<script type="text/javascript" src="/javascripts/jquery/draggableDroppable.min.js"></script>
+<script type="text/javascript" src="/javascripts/jquery/jquery.ui.mouse.min.js"></script>
+<script type="text/javascript" src="/javascripts/d3/d3.min.js"></script>
+<script type="text/javascript" src="/javascripts/controllers/bete_noire/beteNoire.js"></script>
+<script type="text/javascript" src="/javascripts/controllers/bete_noire/game1.min.js"></script>
+<script src="/javascripts/controllers/backbonePuzzles.js"></script>
+<script>
+function makePuzzle(){
+        Puzzles.create({title:'Bete Noire', latency:user_data, attempts:attempts, resets:resets, done:true, user_id:'<%= current_user.id %>'});
+        $('#puzzle_saved').removeClass("hidden");
+        $('#puzzle_save_option').addClass("hidden");
+}
+</script>

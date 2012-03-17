@@ -1,0 +1,56 @@
+<div class="middle">
+
+<%= render 'devise/shared/left_column' %>
+
+             
+<div class="con_cen2">
+                      
+<div class="easymedhard">  
+  
+<div class="LR_top">
+<h1>Dollar Quizzes</h1><br /><br />
+<p>These give you a sample of the three different LSAT section types</p> 
+                      
+<div class="easymedhard_space">
+</div>  
+</div>  
+                      
+                      
+<div class="facil">
+<h1><a><%= link_to "Logical Reasoning", easymedhardLR_path %></a></h1><br /><br />
+<p>Also known as The Arguments.  These make up the most common question type on the LSAT</p><br />
+<h2><%= link_to "Have quiz credits?", quiz_cenLR_path %></h2>                  
+<div class="easymedhard_space">
+</div>
+</div>
+
+<div class="sandbox3">
+<h1><a><%= link_to "Logic Games", easymedhardAR_path %></a></h1><br /><br />
+<p>If you're new to the test, this is probably the part you're obsessed with.  Practice counts the most here.</p><br /> 
+<h2><%= link_to "Have quiz credits?", quiz_cenAR_path %></h2>                       
+<div class="easymedhard_space">
+</div>
+</div>   
+                      
+<div class="medio">
+<h1><a><%= link_to "Reading Comprehension", easymedhardRC_path %></a></h1><br /><br />
+<p>Basically SAT reading passages on performance enhancing drugs</p><br />
+<h2><%= link_to "Have quiz credits?", quiz_cenRC_path %></h2>                       
+<div class="easymedhard_space">
+</div>
+</div>
+                      
+                   
+</div>
+</div>
+
+              
+<% if user_signed_in? %>
+<%= render 'devise/shared/score_feed' %>
+<% else %>
+<%= render 'devise/shared/right_column' %>
+<% end %>
+              
+   
+              
+  </div>

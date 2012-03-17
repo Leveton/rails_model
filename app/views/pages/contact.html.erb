@@ -1,0 +1,39 @@
+ <div class="middle">
+ 
+ <%= render 'devise/shared/left_column' %>
+ <div class="con_cen2">
+ <div class="choices">
+
+ 
+<h4>We are in beta so we really appreciate any feedback</h4><br />
+
+<%= form_for(contactform, :action => 'contact') do |f| %>
+  
+  
+  <%= f.label :name %>
+  <%= f.text_field :name %><br /><br />
+
+  <%= f.label :email %>
+  <%= f.email_field :email %><br /><br />
+  
+  <%= f.label :message %>
+  <%= f.email_field :message %><br /><br />
+  
+  <%= f.label :nickname %>
+  <%= f.email_field :nickname %><br /><br />
+  
+
+
+<div><%= f.submit "Submit" %></div>
+<% end %>
+
+
+</div>
+</div>
+
+              <% if user_signed_in? %>
+              <%= render 'devise/shared/score_feed' %>
+              <% else %>
+              <%= render 'devise/shared/right_column' %>
+              <% end %>
+</div>
